@@ -15,6 +15,8 @@ A slightly opinionated theme for Vuepress
 - [ ] Support for Dark theme
 - [x] Minor tweaks to default Vuepress theme
 
+See it in action [here](https://microflash.github.io/vuepress-theme-succinct/)
+
 ## Get Started
 
 Add the dependency to your existing project via Yarn or NPM.
