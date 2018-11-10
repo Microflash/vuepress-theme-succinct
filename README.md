@@ -1,8 +1,8 @@
 # vuepress-theme-succinct
 
 [![Supported Node Version](https://img.shields.io/badge/node-%3E%3D%208-blue.svg)](https://nodejs.org/en/download/)
-[![Vuepress 1.0.0-alpha.19](https://img.shields.io/badge/vuepress-1.0.0--alpha.19-blue.svg)](https://vuepress.vuejs.org/)
-[![npm](https://img.shields.io/badge/npm-1.0.0--alpha.20-orange.svg)](https://www.npmjs.com/package/vuepress-theme-succinct)
+[![Vuepress 1.0.0-alpha.20](https://img.shields.io/badge/vuepress-1.0.0--alpha.20-blue.svg)](https://vuepress.vuejs.org/)
+[![npm](https://img.shields.io/badge/npm-1.0.0--alpha.21-orange.svg)](https://www.npmjs.com/package/vuepress-theme-succinct)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 A slightly opinionated theme for Vuepress
