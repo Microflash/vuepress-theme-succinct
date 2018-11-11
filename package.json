@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-succinct",
-  "version": "1.0.0-alpha.21",
+  "version": "1.0.0-alpha.22",
   "description": "A slightly opinionated theme for Vuepress",
   "main": "index.js",
   "publishConfig": {

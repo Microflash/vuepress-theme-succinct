@@ -1,5 +1,5 @@
 __tests__
 __mocks__
 .temp
-gh-pages
+docs
 node_modules

@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@vuepress/plugin-active-header-links@^1.0.0-alpha.19":
+"@vuepress/plugin-active-header-links@^1.0.0-alpha.20":
   version "1.0.0-alpha.20"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.0.0-alpha.20.tgz#b780f783afa14a1f2d3ebf2340dd77857967fa40"
   integrity sha512-XoT1Ko0Xb9lM/wl7iK5qttffvh4XfF21po9BHsttIXp8ocSgnEh2MZZuLHCT7NXL3+C95QtQz1Lz3Vt1Hp7F/g==
   dependencies:
     lodash.throttle "^4.1.1"
 
-"@vuepress/plugin-search@^1.0.0-alpha.19":
+"@vuepress/plugin-search@^1.0.0-alpha.20":
   version "1.0.0-alpha.20"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-search/-/plugin-search-1.0.0-alpha.20.tgz#5a96120ca204eb34b42d299ca689bf27bbc99386"
   integrity sha512-ehJBd7kdUAyASN+CwK5K2plw4jGqh6fUJRXG+FM6pDWY0NnrHFdFCGirUnQxdVeTBIiTI1PiHfZp3lYlgwanug==
@@ -146,23 +146,10 @@ core-util-is@1.0.2:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-cp-data@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/cp-data/-/cp-data-1.1.3.tgz#b705f637992db68f37e2d48de525b1d66dd5b372"
-  integrity sha1-twX2N5ktto834tSN5SWx1m3Vs3I=
-
 css-parse@1.7.x:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/css-parse/-/css-parse-1.7.0.tgz#321f6cf73782a6ff751111390fc05e2c657d8c9b"
   integrity sha1-Mh9s9zeCpv91ERE5D8BeLGV9jJs=
-
-dagre@0.4.x:
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/dagre/-/dagre-0.4.6.tgz#622aba8144b08580b3b90b09816a0809791f30b0"
-  integrity sha1-Yiq6gUSwhYCzuQsJgWoICXkfMLA=
-  dependencies:
-    cp-data "1.1.3"
-    graphlib "0.7.4"
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -320,13 +307,6 @@ global@^4.3.2:
     min-document "^2.19.0"
     process "~0.5.1"
 
-graphlib@0.7.4:
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/graphlib/-/graphlib-0.7.4.tgz#41027ea381c3db06bb0c1b0be936d732859edda7"
-  integrity sha1-QQJ+o4HD2wa7DBsL6TbXMoWe3ac=
-  dependencies:
-    cp-data "1.1.3"
-
 har-schema@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/har-schema/-/har-schema-2.0.0.tgz#a94c2224ebcac04782a0d9035521f24735b7ec92"
@@ -449,11 +429,6 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@~3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.7.0.tgz#3678bd8ab995057c07ade836ed2ef087da811d45"
-  integrity sha1-Nni9irmVBXwHreg27S7wh9qBHUU=
-
 mime-db@~1.37.0:
   version "1.37.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.37.0.tgz#0b6a0ce6fdbe9576e25f1f2d2fde8830dc0ad0d8"
@@ -506,14 +481,6 @@ ms@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
-
-nomnoml@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/nomnoml/-/nomnoml-0.2.0.tgz#0b4e34b5bc76f30214fd0ed97ac6fc0c66181ffc"
-  integrity sha1-C040tbx28wIU/Q7Zesb8DGYYH/w=
-  dependencies:
-    dagre "0.4.x"
-    lodash "~3.7.0"
 
 nopt@1.0.10:
   version "1.0.10"

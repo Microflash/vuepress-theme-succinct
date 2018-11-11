@@ -5,17 +5,17 @@
 @require './wrapper'
 @require './toc'
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i')
+@import url($themeFont)
 
 html, body
   padding 0
   margin 0
 
 body
-  font-family Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  font-family $bodyFontFamily, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  font-size 20px
+  font-size $bodyFontSize
   background-color $bodyBgColor
   color $textColor
 
@@ -143,7 +143,7 @@ a.header-anchor
     text-decoration none
 
 code, kbd, .line-number
-  font-family "Roboto Mono", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+  font-family $monoFontFamily, source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
 
 p, ul, ol
   line-height 1.7

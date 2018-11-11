@@ -2,7 +2,7 @@
 
 [![Supported Node Version](https://img.shields.io/badge/node-%3E%3D%208-blue.svg)](https://nodejs.org/en/download/)
 [![Vuepress 1.0.0-alpha.20](https://img.shields.io/badge/vuepress-1.0.0--alpha.20-blue.svg)](https://vuepress.vuejs.org/)
-[![npm](https://img.shields.io/badge/npm-1.0.0--alpha.21-orange.svg)](https://www.npmjs.com/package/vuepress-theme-succinct)
+[![npm](https://img.shields.io/badge/npm-1.0.0--alpha.22-orange.svg)](https://www.npmjs.com/package/vuepress-theme-succinct)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 A slightly opinionated theme for Vuepress
@@ -11,11 +11,12 @@ A slightly opinionated theme for Vuepress
 
 ## Features
 
-- [x] Roboto and Roboto Mono set as default fonts
+- [x] Custom font support via URL imports
 - [ ] Support for Dark theme
 - [x] Minor tweaks to default Vuepress theme
 
-See it in action [here](https://microflash.github.io/vuepress-theme-succinct/)
+
+Check out the [documentation](https://microflash.github.io/vuepress-theme-succinct/) built with Vuepress and Succinct, obviously :smirk:
 
 ## Get Started
 
