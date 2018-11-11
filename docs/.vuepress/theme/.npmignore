@@ -1,0 +1,5 @@
+__tests__
+__mocks__
+.temp
+docs
+node_modules

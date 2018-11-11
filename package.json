@@ -1,0 +1,19 @@
+{
+  "name": "vuepress-theme-succinct",
+  "version": "1.0.0",
+  "description": "A slightly opinionated theme for Vuepress",
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "eject": "vuepress eject docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/transkript/succinct-java.git"
+  },
+  "author": "Naiyer Asif",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.20"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "vuepress-theme-succinct",
+  "version": "1.0.0-alpha.22",
+  "description": "A slightly opinionated theme for Vuepress",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microflash/vuepress-theme-succinct"
+  },
+  "keywords": [
+    "documentation",
+    "vue",
+    "vuepress",
+    "generator"
+  ],
+  "author": "Naiyer Asif",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Microflash/vuepress-theme-succinct/issues"
+  },
+  "homepage": "https://github.com/Microflash/vuepress-theme-succinct#readme",
+  "dependencies": {
+    "@vuepress/plugin-active-header-links": "^1.0.0-alpha.20",
+    "@vuepress/plugin-search": "^1.0.0-alpha.20",
+    "docsearch.js": "^2.5.2",
+    "nprogress": "^0.2.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  }
+}
