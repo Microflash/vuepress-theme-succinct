@@ -1,8 +1,8 @@
 # vuepress-theme-succinct
 
 [![Node 8 or higher](https://img.shields.io/badge/node-%3E%3D%208-blue.svg)](https://nodejs.org/en/download/)
-[![Vuepress 1.0.0-alpha.22](https://img.shields.io/badge/vuepress-1.0.0--alpha.22-blue.svg)](https://vuepress.vuejs.org/)
-[![npm v1.0.0-alpha.23](https://img.shields.io/badge/npm-1.0.0--alpha.23-orange.svg)](https://www.npmjs.com/package/vuepress-theme-succinct)
+[![Vuepress 1.0.0-alpha.29](https://img.shields.io/badge/vuepress-1.0.0--alpha.29-blue.svg)](https://vuepress.vuejs.org/)
+[![npm v1.0.0-alpha.29](https://img.shields.io/badge/npm-1.0.0--alpha.29-orange.svg)](https://www.npmjs.com/package/vuepress-theme-succinct)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 A slightly opinionated theme for Vuepress
@@ -20,7 +20,7 @@ Check out the [documentation](https://microflash.github.io/vuepress-theme-succin
 
 ## Get Started
 
-Add the dependency to your existing project via Yarn or NPM.
+Add the dependency to your existing Vuepress project via Yarn or NPM.
 
 ```bash
 yarn add -D vuepress-theme-succinct

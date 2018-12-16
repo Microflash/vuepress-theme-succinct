@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@vuepress/plugin-active-header-links@^1.0.0-alpha.22":
-  version "1.0.0-alpha.22"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.0.0-alpha.22.tgz#cb739e6774a6097c3a9fa2d3bfb5629c88cb50f3"
-  integrity sha512-WmmMhQO5uk981n0PQcRReUNwBoqIlUUuxD9JUqs5rEnslpL3+UULIxPfHwjvFg2nca1InCVvfUXQH2fiMNZ2cQ==
+"@vuepress/plugin-active-header-links@^1.0.0-alpha.29":
+  version "1.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.0.0-alpha.29.tgz#fc218a0d37b27f28678e8c8ddcad7993ac7498fe"
+  integrity sha512-qA5h8K/7/Hsnlqsg51QkOOx1jzFBaghj4G21ilk87DKD5fw8MLmIlOQVlHYISeWGnfav+ZczVu8kHMTUFTgOcQ==
   dependencies:
     lodash.throttle "^4.1.1"
 
-"@vuepress/plugin-search@^1.0.0-alpha.22":
-  version "1.0.0-alpha.22"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-search/-/plugin-search-1.0.0-alpha.22.tgz#1e48928fdde5318a104819a73be6b56f397bb3bd"
-  integrity sha512-S2uu3yCyz9MAbLk8iv4MDhtAqm4V/F3pJZ4me4l+FskvH8rbyI/vlZN4dfeuRGumcEg7eCywvvsGFYUMq4utbg==
+"@vuepress/plugin-search@^1.0.0-alpha.29":
+  version "1.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-search/-/plugin-search-1.0.0-alpha.29.tgz#869cf1962e9d637610a941bc5ca47cedf3b1b32d"
+  integrity sha512-vGhtWkEuJg/Jsg9qxs48qjIyA7MmFpoCGZE7+eRJp74QA+i9KzFsPeqrjXrHZnzqa33siWeYWQYS14EbJcspKQ==
 
 abbrev@1:
   version "1.1.1"
