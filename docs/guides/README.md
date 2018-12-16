@@ -8,12 +8,16 @@ title: Get Started
 This theme is for Vuepress 1.x which is currently in alpha. I plan to mirror the official versions as it readies for GA. Until then, use this only if you feel adventurous.
 :::
 
-Add the dependency to your existing project via Yarn or NPM.
+Add the dependency to your existing Vuepress project via Yarn or NPM.
 
 ```bash
 yarn add -D vuepress-theme-succinct
 npm install -D vuepress-theme-succinct
 ```
+
+::: tip
+Refer to [Getting Started Guide](https://vuepress.vuejs.org/guide/getting-started.html) to create a Vuepress project.
+:::
 
 Update `.vuepress/config.js` as follows.
 

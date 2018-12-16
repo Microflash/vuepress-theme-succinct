@@ -5,14 +5,18 @@ title: Styling
 # Styling
 
 ::: tip
-Please have a look at the [Styling configuration reference](https://vuepress.vuejs.org/config/#styling) before delving into the styling options described below.
+Please have a look at the [Styling configuration reference](https://vuepress.vuejs.org/config/#styling) before diving into the styling options described below.
 :::
 
 ::: warning
 These options are experimental and not part of the official Vuepress releases.
 :::
 
-You can provide Google fonts URL (or any external font URL) in `.vuepress/styles/palette.styl` to override the default font. You'll have to provide the font name as well to make this work. Further, you can also specify the base font-size for the body. Most of the font sizes inherit from this value.
+## Custom Fonts
+
+Any web font (including those from Google Fonts) can be configured in `.vuepress/styles/palette.styl` to override the default font. Set the `bodyFontFamily` and `monoFontFamily` variables with appropriate font-family names to make this work. 
+
+A base font-size for the body can also be configured with `bodyFontSize` variable. Most of the font sizes inherit from this value.
 
 ```stylus
 // configuration provided by vuepress-theme-succinct

@@ -1,4 +1,4 @@
-# Succinct Java
+# Succinct
 
 A slightly opinionated theme for Vuepress
 
@@ -22,6 +22,8 @@ The NPM package for this project `docs/.vuepress/theme` is published on NPM at <
 
 1. `cd docs/.vuepress/theme`
 2. `npm publish`
+
+> To preview the publish, use `npm publish --dry-run`
 
 ### Documentation
 
