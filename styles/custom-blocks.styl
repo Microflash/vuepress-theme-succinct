@@ -1,32 +1,32 @@
+$tipAccent = #42b983
+$warningAccent = #c4a300
+$dangerAccent = #e2442f
+
 .custom-block
   .custom-block-title
     font-weight 600
     letter-spacing 0.1rem
     margin-bottom -0.4rem
   &.tip, &.warning, &.danger
-    padding .1rem 1.5rem
+    padding .1rem 1rem
     border-left-width .25rem
     border-left-style solid
     margin 1rem 0
   &.tip
-    background-color #f3f5f7
-    border-color #42b983
+    background-color alpha($tipAccent, 0.25)
+    border-color $tipAccent
   &.warning
-    background-color rgba(255,229,100,.3)
-    border-color darken(#ffe564, 35%)
-    color darken(#ffe564, 70%)
+    background-color alpha($warningAccent, 0.25)
+    border-color $warningAccent
+    color $warningAccent
     .custom-block-title
-      color darken(#ffe564, 50%)
-    a
-      color $textColor
+      color darken($warningAccent, 5)
   &.danger
-    background-color #ffe6e6
-    border-color darken(red, 20%)
-    color darken(red, 70%)
+    background-color alpha($dangerAccent, 0.25)
+    border-color $dangerAccent
+    color $dangerAccent
     .custom-block-title
-      color darken(red, 40%)
-    a
-      color $textColor
+      color darken($dangerAccent, 5)
 
 pre.vue-container
   border-left-width: .5rem;
