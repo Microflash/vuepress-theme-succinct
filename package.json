@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-succinct",
-  "version": "1.0.0-alpha.29",
+  "version": "1.0.0-alpha.37",
   "description": "A slightly opinionated theme for Vuepress",
   "scripts": {
     "start": "vuepress dev docs",
@@ -14,6 +14,6 @@
   "author": "Naiyer Asif",
   "license": "GPL-3.0",
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.29"
+    "vuepress": "^1.0.0-alpha.37"
   }
 }

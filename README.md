@@ -4,7 +4,7 @@ A slightly opinionated theme for Vuepress
 
 ## Development
 
-> **Requirements** Ensure that [Node.js](https://nodejs.org/en/download/) >= 8 and [yarn](https://yarnpkg.com/en/) are installed and accessible on your machine. **Yarn** is the recommended package manager but **npm** can also be used instead.
+> **Requirements** Ensure that [Node.js](https://nodejs.org/en/download/) >= 8 and [yarn](https://yarnpkg.com/en/) are installed and accessible on your machine. **Yarn** is the recommended package manager but **npm** can also be used.
 
 1. Clone this project.
 2. `cd vuepress-theme-succinct`
