@@ -2,17 +2,24 @@
 # yarn lockfile v1
 
 
-"@vuepress/plugin-active-header-links@^1.0.0-alpha.29":
-  version "1.0.0-alpha.29"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.0.0-alpha.29.tgz#fc218a0d37b27f28678e8c8ddcad7993ac7498fe"
-  integrity sha512-qA5h8K/7/Hsnlqsg51QkOOx1jzFBaghj4G21ilk87DKD5fw8MLmIlOQVlHYISeWGnfav+ZczVu8kHMTUFTgOcQ==
+"@vuepress/plugin-active-header-links@^1.0.0-alpha.37":
+  version "1.0.0-alpha.37"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.0.0-alpha.37.tgz#f854199bec2b0f79a1b63193275e083b1a55617f"
+  integrity sha512-laYF8x7X/QOpt2GkNZl6bUeO9FAdUa4MBGgGvmQGZowPhF6uzZB4a/jYlzSFojG6bGaKDpNXhhiuaGdEqE6q8w==
   dependencies:
     lodash.throttle "^4.1.1"
 
-"@vuepress/plugin-search@^1.0.0-alpha.29":
-  version "1.0.0-alpha.29"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-search/-/plugin-search-1.0.0-alpha.29.tgz#869cf1962e9d637610a941bc5ca47cedf3b1b32d"
-  integrity sha512-vGhtWkEuJg/Jsg9qxs48qjIyA7MmFpoCGZE7+eRJp74QA+i9KzFsPeqrjXrHZnzqa33siWeYWQYS14EbJcspKQ==
+"@vuepress/plugin-nprogress@^1.0.0-alpha.37":
+  version "1.0.0-alpha.37"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-nprogress/-/plugin-nprogress-1.0.0-alpha.37.tgz#8eaa720223cd17daf742457ff6e313fb9e49eeb4"
+  integrity sha512-0lRTu3Qxv4s9LaPyXKWOD18Vy+h06F6DnDtm9zeLob2ffzhE05z7uIBiEOOlGgdb9XtE2X1urVC8kV1zoYlbCA==
+  dependencies:
+    nprogress "^0.2.0"
+
+"@vuepress/plugin-search@^1.0.0-alpha.37":
+  version "1.0.0-alpha.37"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-search/-/plugin-search-1.0.0-alpha.37.tgz#4bad17b4c7597bbed48a5b7a0876838caf9400ef"
+  integrity sha512-r6cz2QYsFxvITVKgczCW7fW/+skS0D2a6qBo5xc/V+1HQoBm8lcGEDafVZwsQK+FXP1fBIewz4MFp7udx6Hgjw==
 
 abbrev@1:
   version "1.1.1"
