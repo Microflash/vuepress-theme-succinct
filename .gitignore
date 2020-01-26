@@ -1,5 +1,4 @@
 docs/.vuepress/theme/.git
 docs/.vuepress/theme/docs
 docs/.vuepress/theme/node_modules
-node_modules/
-public/
+node_modules

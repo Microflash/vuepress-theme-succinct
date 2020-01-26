@@ -1,4 +1,4 @@
-.content
+{$contentClass}
   code
     color lighten($textColor, 20%)
     padding 0.25rem 0.5rem
@@ -12,7 +12,7 @@
       &.inserted
         color $accentColor
 
-.content
+{$contentClass}
   pre, pre[class*="language-"]
     line-height 1.4
     padding 1.25rem 1.5rem
@@ -30,6 +30,7 @@ div[class*="language-"]
   position relative
   background-color $codeBgColor
   border-radius 6px
+  overflow hidden
   .highlight-lines
     user-select none
     padding-top 1.3rem
@@ -43,6 +44,7 @@ div[class*="language-"]
   pre, pre[class*="language-"]
     background transparent
     position relative
+    margin-bottom 0
     z-index 1
   &::before
     position absolute
@@ -133,3 +135,5 @@ div[class~="language-bash"]:before
 
 div[class~="language-php"]:before
   content "php"
+
+@import '~prismjs/themes/prism-tomorrow.css'

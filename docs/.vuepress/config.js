@@ -1,31 +1,24 @@
 module.exports = {
-  title: "Succinct",
-  description: "A slightly opinionated theme for Vuepress",
-  base: "/vuepress-theme-succinct/",
-  dest: "docs/.vuepress/theme/docs",
-  theme: "succinct",
+  title: 'Succinct',
+  description: 'A slightly opinionated theme for Vuepress',
+  base: '/vuepress-theme-succinct/',
+  dest: 'docs/.vuepress/theme/docs',
+  theme: 'succinct',
   themeConfig: {
-    lastUpdated: true,
+    lastUpdated: 'Last Updated',
     nav: [
-      {
-        text: "Home",
-        link: "/"
-      },
-      {
-        text: "GitHub",
-        link: "https://github.com/Microflash/vuepress-theme-succinct"
-      }
+      { text: 'Home', link: '/' },
+      { text: 'GitHub', link: 'https://github.com/Microflash/vuepress-theme-succinct' }
     ],
     sidebar: [
       {
-        title: "Guides",
-        collapsible: false,
+        title: 'Guide',
+        collapsable: false,
         children: [
-          "/guides/",
-          "/guides/styling"
+          '/guide/',
+          '/guide/configuration'
         ]
       }
     ]
   }
-};
-
+}
