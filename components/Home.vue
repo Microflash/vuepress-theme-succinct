@@ -1,36 +1,5 @@
 <template>
   <main class="home" aria-labelledby="main-title">
-    <script type="text/javascript">
-      (function () {
-          window.__onThemeChange = function () { };
-          function setTheme(newTheme) {
-            window.__theme = newTheme;
-            preferredTheme = newTheme;
-            document.body.setAttribute('data-theme', newTheme);
-            window.__onThemeChange(newTheme);
-          }
-
-          var preferredTheme;
-          try {
-            preferredTheme = localStorage.getItem('theme');
-          } catch (err) { }
-
-          window.__setPreferredTheme = function (newTheme) {
-            setTheme(newTheme);
-            try {
-              localStorage.setItem('theme', newTheme);
-            } catch (err) { }
-          }
-
-          var isColorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-          isColorSchemeDark.addListener(function (e) {
-            window.__setPreferredTheme(e.matches ? 'dark' : 'light');
-          });
-
-          setTheme(preferredTheme || (isColorSchemeDark.matches ? 'dark' : 'light'));
-        })();
-    </script>
     <header class="hero">
       <img
         v-if="data.heroImage"
