@@ -1,8 +1,7 @@
 # vuepress-theme-succinct
 
-[![Node 8 or higher](https://img.shields.io/badge/node-%3E%3D%208-blue.svg)](https://nodejs.org/en/download/)
-[![Vuepress 1.0.4](https://img.shields.io/badge/vuepress-1.0.4-blue.svg)](https://vuepress.vuejs.org/)
-[![npm v1.0.4](https://img.shields.io/badge/npm-1.0.4-orange.svg)](https://www.npmjs.com/package/vuepress-theme-succinct)
+[![Vuepress 1.2.0](https://img.shields.io/badge/vuepress-1.2.0-blue.svg)](https://github.com/vuejs/vuepress)
+[![npm](https://img.shields.io/npm/v/vuepress-theme-succinct)](https://www.npmjs.com/package/vuepress-theme-succinct)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 A slightly opinionated theme for Vuepress
@@ -11,9 +10,6 @@ A slightly opinionated theme for Vuepress
 
 - Custom font support via URL imports
 - Minor tweaks to default Vuepress theme
-
-### Planned
-- Dark theme
 
 Check out the [documentation](https://microflash.github.io/vuepress-theme-succinct/) built with Vuepress and Succinct, obviously :smirk:
 
