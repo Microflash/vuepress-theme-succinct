@@ -7,17 +7,95 @@
 
 @import url($themeFont)
 
+[data-theme='light']
+  --accentColor $accentColor
+  --textColor $textColor
+  --textMutedColor lighten($textColor, 25%)
+  --selectionColor transparentify($textColor, $bodyBgColor, 0.1)
+  --headerColor lighten($textColor, 10%)
+  --descriptionColor lighten($textColor, 40%)
+  --borderColor $borderColor
+  --codeColor lighten($textColor, 20%)
+  --codeBgColor $codeBgColor
+  --codeBgHighlightColor tint($codeBgColor, 10%)
+  --arrowBgColor $arrowBgColor
+  --bodyBgColor $bodyBgColor
+  --bodyComplementColor darken($bodyBgColor, 2%)
+  --badgeTipColor $badgeTipColor
+  --badgeWarningColor $badgeWarningColor
+  --badgeWarningTextColor darken($badgeWarningColor, 70%)
+  --badgeWarningTitleColor darken($badgeWarningColor, 50%)
+  --badgeErrorColor $badgeErrorColor
+  --badgeErrorTextColor darken($badgeErrorColor, 70%)
+  --badgeErrorTitleColor darken($badgeErrorColor, 50%)
+  --actionBtnBorderColor darken($accentColor, 10%)
+  --actionBtnHoverBorderColor lighten($accentColor, 10%)
+  --navItemHoverColor lighten($accentColor, 8%)
+
+[data-theme='dark']
+  --accentColor $accentColorDark
+  --textColor $textColorDark
+  --textMutedColor darken($textColorDark, 25%)
+  --selectionColor transparentify($textColorDark, $bodyBgColorDark, 0.1)
+  --headerColor darken($textColorDark, 5%)
+  --descriptionColor darken($textColorDark, 10%)
+  --borderColor $borderColorDark
+  --codeColor darken($textColorDark, 20%)
+  --codeBgColor $codeBgColorDark
+  --codeBgHighlightColor tint($codeBgColorDark, 3%)
+  --arrowBgColor $arrowBgColorDark
+  --bodyBgColor $bodyBgColorDark
+  --bodyComplementColor lighten($bodyBgColorDark, 5%)
+  --badgeTipColor $badgeTipColorDark
+  --badgeWarningColor $badgeWarningColorDark
+  --badgeWarningTextColor lighten($badgeWarningColorDark, 70%)
+  --badgeWarningTitleColor lighten($badgeWarningColorDark, 50%)
+  --badgeErrorColor $badgeErrorColorDark
+  --badgeErrorTextColor lighten($badgeErrorColorDark, 70%)
+  --badgeErrorTitleColor lighten($badgeErrorColorDark, 50%)
+  --actionBtnBorderColor darken($accentColorDark, 10%)
+  --actionBtnHoverBorderColor darken($accentColorDark, 10%)
+  --navItemHoverColor darken($accentColorDark, 8%)
+
+*
+  &::-webkit-scrollbar, &::-webkit-scrollbar-track
+    background-color var(--bodyComplementColor)
+
+  &::-webkit-scrollbar-thumb
+    background-color var(--selectionColor)
+
+  &::-webkit-scrollbar-button
+    background-color var(--bodyComplementColor)
+
+  scrollbar-color var(--selectionColor) var(--bodyComplementColor)
+
+  scroll-behavior smooth
+
+  @media screen and (prefers-reduced-motion: true)
+    scroll-behavior auto
+
+  &::-moz-selection
+    background var(--selectionColor)
+  
+  &::selection
+    background var(--selectionColor)
+
 html, body
   padding 0
   margin 0
-  background-color $bodyBgColor
+  background-color var(--bodyBgColor)
 
 body
   font-family $bodyFontFamily, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
+  text-rendering optimizeLegibility
   font-size $bodyFontSize
-  color $textColor
+
+  if $textSizeAdjust
+    text-size-adjust 100%
+
+  color var(--textColor)
 
 .page
   padding-left $sidebarWidth
@@ -29,9 +107,9 @@ body
   left 0
   right 0
   height $navbarHeight
-  background-color #fff
+  background-color var(--bodyBgColor)
   box-sizing border-box
-  border-bottom 1px solid $borderColor
+  border-bottom 1px solid var(--borderColor)
 
 .sidebar-mask
   position fixed
@@ -44,7 +122,7 @@ body
 
 .sidebar
   font-size 16px
-  background-color #fff
+  background-color var(--bodyBgColor)
   width $sidebarWidth
   position fixed
   z-index 10
@@ -53,8 +131,26 @@ body
   left 0
   bottom 0
   box-sizing border-box
-  border-right 1px solid $borderColor
+  border-right 1px solid var(--borderColor)
   overflow-y auto
+
+.search-box
+  input
+    color var(--textMutedColor) !important
+    border-color var(--borderColor) !important
+    background-color var(--bodyBgColor) !important
+    &:focus
+      border-color var(--accentColor) !important
+  .suggestions
+    background var(--bodyBgColor) !important
+    border-color var(--borderColor) !important
+  .suggestion
+    a
+      color var(--textMutedColor) !important
+    &.focused
+      background-color var(--bodyComplementColor) !important
+      a
+        color var(--accentColor) !important
 
 {$contentClass}:not(.custom)
   @extend $wrapper
@@ -66,7 +162,7 @@ body
 
   p.demo
     padding 1rem 1.5rem
-    border 1px solid #ddd
+    border 1px solid var(--borderColor)
     border-radius 4px
 
   img
@@ -81,24 +177,24 @@ body
 
 a
   font-weight 500
-  color $accentColor
+  color var(--accentColor)
   text-decoration none
 
 p a code
   font-weight 400
-  color $accentColor
+  color var(--accentColor)
 
 kbd
-  background #eee
-  border solid 0.15rem #ddd
-  border-bottom solid 0.25rem #ddd
+  background var(--textMutedColor)
+  border solid 0.15rem var(--borderColor)
+  border-bottom solid 0.25rem var(--borderColor)
   border-radius 0.15rem
   padding 0 0.15em
 
 blockquote
   font-size inherit
-  color #999;
-  border-left .2rem solid #dfe2e5
+  color var(--textMutedColor)
+  border-left .2rem solid var(--borderColor)
   margin 0.5rem 0
   padding .25rem 0 .25rem 1rem
 
@@ -136,7 +232,7 @@ h1
 h2
   font-size 1.65rem
   padding-bottom .3rem
-  border-bottom 1px solid $borderColor
+  border-bottom 1px solid var(--borderColor)
 
 h3
   font-size 1.35rem
@@ -160,7 +256,7 @@ p, ul, ol
 
 hr
   border 0
-  border-top 1px solid $borderColor
+  border-top 1px solid var(--borderColor)
 
 table
   border-collapse collapse
@@ -169,13 +265,13 @@ table
   overflow-x: auto
 
 tr
-  border-top 1px solid #dfe2e5
+  border-top 1px solid var(--borderColor)
 
   &:nth-child(2n)
-    background-color #f6f8fa
+    background-color var(--bodyComplementColor)
 
 th, td
-  border 1px solid #dfe2e5
+  border 1px solid var(--borderColor)
   padding .6em 1em
 
 .theme-container

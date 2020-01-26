@@ -19,6 +19,13 @@
       />
     </div>
 
+    <!-- Theme Switcher -->
+    <div
+      class="nav-item"
+    >
+      <ThemeSwitcher />
+    </div>
+
     <!-- repo link -->
     <a
       v-if="repoLink"
@@ -37,9 +44,10 @@
 import DropdownLink from '@theme/components/DropdownLink.vue'
 import { resolveNavLinkItem } from '../util'
 import NavLink from '@theme/components/NavLink.vue'
+import ThemeSwitcher from '@theme/components/ThemeSwitcher.vue'
 
 export default {
-  components: { NavLink, DropdownLink },
+  components: { NavLink, DropdownLink, ThemeSwitcher },
 
   computed: {
     userNav () {
@@ -120,11 +128,12 @@ export default {
 <style lang="stylus">
 .nav-links
   display inline-block
+  cursor pointer
   a
     line-height 1.4rem
     color inherit
     &:hover, &.router-link-active
-      color $accentColor
+      color var(--accentColor)
   .nav-item
     position relative
     display inline-block
@@ -143,9 +152,9 @@ export default {
 @media (min-width: $MQMobile)
   .nav-links a
     &:hover, &.router-link-active
-      color $textColor
+      color var(--textColor)
   .nav-item > a:not(.external)
     &:hover, &.router-link-active
       margin-bottom -2px
-      border-bottom 2px solid lighten($accentColor, 8%)
+      border-bottom 2px solid var(--navItemHoverColor)
 </style>

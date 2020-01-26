@@ -116,7 +116,7 @@ export default {
     background transparent
     border none
     font-weight 500
-    color $textColor
+    color var(--textColor)
     &:hover
       border-color transparent
     .arrow
@@ -129,7 +129,7 @@ export default {
       line-height 1.7rem
       h4
         margin 0.45rem 0 0
-        border-top 1px solid #eee
+        border-top 1px solid var(--borderColor)
         padding 0.45rem 1.5rem 0 1.25rem
       .dropdown-subitem-wrapper
         padding 0
@@ -145,14 +145,14 @@ export default {
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem
         &:hover
-          color $accentColor
+          color var(--accentColor)
         &.router-link-active
-          color $accentColor
+          color var(--accentColor)
           &::after
             content ""
             width 0
             height 0
-            border-left 5px solid $accentColor
+            border-left 5px solid var(--accentColor)
             border-top 3px solid transparent
             border-bottom 3px solid transparent
             position absolute
@@ -171,7 +171,7 @@ export default {
       font-weight 600
       font-size inherit
       &:hover
-        color $accentColor
+        color var(--accentColor)
     .nav-dropdown
       transition height .1s ease-out
       overflow hidden
@@ -200,7 +200,7 @@ export default {
       // make the arrow always down at desktop
       border-left 4px solid transparent
       border-right 4px solid transparent
-      border-top 6px solid $arrowBgColor
+      border-top 6px solid var(--arrowBgColor)
       border-bottom 0
     .nav-dropdown
       display none
@@ -212,10 +212,9 @@ export default {
       position absolute
       top 100%
       right 0
-      background-color #fff
+      background-color var(--bodyBgColor)
       padding 0.6rem 0
-      border 1px solid #ddd
-      border-bottom-color #ccc
+      border 1px solid var(--borderColor)
       text-align left
       border-radius 0.25rem
       white-space nowrap

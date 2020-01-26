@@ -8,10 +8,9 @@ A slightly opinionated theme for Vuepress
 
 ## Features
 
-- Custom font support via URL imports
-- Minor tweaks to default Vuepress theme
-
-Check out the [documentation](https://microflash.github.io/vuepress-theme-succinct/) built with Vuepress and Succinct, obviously :smirk:
+- **Customizable typography**: Import and use your favorite web-fonts. Customize font sizes and text-adjustment for body text
+- **Dark and light themes**: With a theme-switcher and native theme detection to set the theme automatically as per the user preference
+- **Accessible**: Succinct applies tweaks - deeper contrast, better legibility preferences, etc - to improve the readability
 
 ## Get Started
 
@@ -37,6 +36,8 @@ module.exports = {
   theme: 'succinct'
 }
 ```
+
+Check out the [documentation](https://microflash.github.io/vuepress-theme-succinct/) built with Vuepress and Succinct :smile: for more details.
 
 ## Plugins
 
