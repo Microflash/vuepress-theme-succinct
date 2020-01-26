@@ -6,9 +6,9 @@ module.exports = {
   theme: 'succinct',
   themeConfig: {
     lastUpdated: 'Last Updated',
+    repo: 'Microflash/vuepress-theme-succinct',
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'GitHub', link: 'https://github.com/Microflash/vuepress-theme-succinct' }
+      { text: 'Home', link: '/' }
     ],
     sidebar: [
       {

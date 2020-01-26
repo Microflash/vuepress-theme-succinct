@@ -1,5 +1,36 @@
 <template>
   <main class="home" aria-labelledby="main-title">
+    <script type="text/javascript">
+      (function () {
+          window.__onThemeChange = function () { };
+          function setTheme(newTheme) {
+            window.__theme = newTheme;
+            preferredTheme = newTheme;
+            document.body.setAttribute('data-theme', newTheme);
+            window.__onThemeChange(newTheme);
+          }
+
+          var preferredTheme;
+          try {
+            preferredTheme = localStorage.getItem('theme');
+          } catch (err) { }
+
+          window.__setPreferredTheme = function (newTheme) {
+            setTheme(newTheme);
+            try {
+              localStorage.setItem('theme', newTheme);
+            } catch (err) { }
+          }
+
+          var isColorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+          isColorSchemeDark.addListener(function (e) {
+            window.__setPreferredTheme(e.matches ? 'dark' : 'light');
+          });
+
+          setTheme(preferredTheme || (isColorSchemeDark.matches ? 'dark' : 'light'));
+        })();
+    </script>
     <header class="hero">
       <img
         v-if="data.heroImage"
@@ -91,21 +122,21 @@ export default {
       max-width 40rem
       font-size 1.6rem
       line-height 1.3
-      color lighten($textColor, 40%)
+      color var(--descriptionColor)
     .action-button
       display inline-block
       font-size 1.2rem
-      color #fff
-      background-color $accentColor
+      color var(--bodyBgColor)
+      background-color var(--accentColor)
       padding 0.6rem 1.4rem
       border-radius 40px
       transition background-color .1s ease
       box-sizing border-box
-      border-bottom 1px solid darken($accentColor, 10%)
+      border-bottom 1px solid var(--actionBtnBorderColor)
       &:hover
-        background-color lighten($accentColor, 10%)
+        background-color var(--actionBtnHoverBorderColor)
   .features
-    border-top 1px solid $borderColor
+    border-top 1px solid var(--borderColor)
     padding 1.2rem 0
     margin-top 2.5rem
     display flex
@@ -122,14 +153,14 @@ export default {
       font-weight 500
       border-bottom none
       padding-bottom 0
-      color lighten($textColor, 10%)
+      color var(--headerColor)
     p
-      color lighten($textColor, 25%)
+      color var(--textMutedColor)
   .footer
     padding 2.5rem
-    border-top 1px solid $borderColor
+    border-top 1px solid var(--borderColor)
     text-align center
-    color lighten($textColor, 25%)
+    color var(--textMutedColor)
 
 @media (max-width: $MQMobile)
   .home
