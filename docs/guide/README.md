@@ -29,18 +29,26 @@ Refer to [Getting Started Guide](https://vuepress.vuejs.org/guide/getting-starte
 
 Update `.vuepress/config.js` as follows.
 
-```js{3}
+```js{3-6}
 // .vuepress > config.js
 module.exports = {
-  theme: 'vuepress-theme-succinct'
+  theme: 'vuepress-theme-succinct',
+  globalUIComponents: [
+    'ThemeManager'
+  ],
 }
 ```
 
-You can also use the shorthand.
+`ThemeManager` provides theme-switching functionality across the app.
+
+Note that you can also use the shorthand name for the theme.
 
 ```js{3}
 // .vuepress > config.js
 module.exports = {
-  theme: 'succinct'
+  theme: 'succinct',
+  globalUIComponents: [
+    'ThemeManager'
+  ],
 }
 ```

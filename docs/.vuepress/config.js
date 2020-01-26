@@ -4,6 +4,9 @@ module.exports = {
   base: '/vuepress-theme-succinct/',
   dest: 'docs/.vuepress/theme/docs',
   theme: 'succinct',
+  globalUIComponents: [
+    'ThemeManager'
+  ],
   themeConfig: {
     lastUpdated: 'Last Updated',
     repo: 'Microflash/vuepress-theme-succinct',

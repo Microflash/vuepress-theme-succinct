@@ -16,24 +16,32 @@ A slightly opinionated theme for Vuepress
 
 Add the dependency to your existing Vuepress project via Yarn or NPM.
 
-```bash
+```sh
 yarn add -D vuepress-theme-succinct
 npm install -D vuepress-theme-succinct
 ```
 
 Update `.vuepress/config.js` as follows.
 
-```bash
+```js
 module.exports = {
-  theme: 'vuepress-theme-succinct'
+  theme: 'vuepress-theme-succinct',
+  globalUIComponents: [
+    'ThemeManager'
+  ],
 }
 ```
 
-You can also use the shorthand.
+`ThemeManager` provides theme-switching functionality across the app.
 
-```bash
+Note that you can also use the shorthand name for the theme.
+
+```js
 module.exports = {
-  theme: 'succinct'
+  theme: 'succinct',
+  globalUIComponents: [
+    'ThemeManager'
+  ],
 }
 ```
 
