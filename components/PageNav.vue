@@ -8,7 +8,7 @@
         v-if="prev"
         class="prev"
       >
-        ←
+        &xlarr;
         <a
           v-if="prev.type === 'external'"
           class="prev"
@@ -51,7 +51,7 @@
         >
           {{ next.title || next.path }}
         </RouterLink>
-        →
+        &xrarr;
       </span>
     </p>
   </div>

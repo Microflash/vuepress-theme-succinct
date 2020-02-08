@@ -5,7 +5,8 @@
 @require './wrapper'
 @require './toc'
 
-@import url($themeFont)
+for f in $themeFont
+  @import url(f)
 
 [data-theme='light']
   --accentColor $accentColor
