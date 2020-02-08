@@ -13,7 +13,7 @@ You can check the level of support on [caniuse](https://caniuse.com/):
 
 In case the support for these specifications is not available, `vuepress-theme-succinct` will fallback to the light theme. You can override this behavior through `$fallbackTheme` in `palette.styl` file.
 
-```stylus
+```stylus{4}
 // .vuepress > styles > palette.styl
 
 // fallback theme

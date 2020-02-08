@@ -60,8 +60,20 @@ A base font-size for the body can also be configured with `bodyFontSize` variabl
 ```stylus
 // .vuepress > styles > palette.styl
 
-$themeFont = "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700|Lato:400,400i,700,700i&display=swap"
+$themeFont = "https://fonts.googleapis.com/css?family=Roboto+Mono|Lato&display=swap"
 $bodyFontFamily = "Lato"
-$monoFontFamily = "IBM Plex Mono"
+$monoFontFamily = "Roboto Mono"
 $bodyFontSize = 18px
+```
+
+::: tip
+You can specify multiple URLs for `$themeFont` variable to include fonts from different sources.
+:::
+
+```stylus{3}
+// .vuepress > styles > palette.styl
+
+$themeFont = "https://rsms.me/inter/inter.css" "https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+$bodyFontFamily = "Inter"
+$monoFontFamily = "Roboto Mono"
 ```
