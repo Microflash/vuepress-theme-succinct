@@ -1,13 +1,13 @@
 <template>
   <nav
-    class="nav-links"
     v-if="userLinks.length || repoLink"
+    class="nav-links"
   >
     <!-- user links -->
     <div
-      class="nav-item"
       v-for="item in userLinks"
       :key="item.link"
+      class="nav-item"
     >
       <DropdownLink
         v-if="item.type === 'links'"
@@ -35,7 +35,7 @@
       rel="noopener noreferrer"
     >
       {{ repoLabel }}
-      <OutboundLink/>
+      <OutboundLink />
     </a>
   </nav>
 </template>
@@ -47,7 +47,13 @@ import NavLink from '@theme/components/NavLink.vue'
 import ThemeSwitcher from '@theme/components/ThemeSwitcher.vue'
 
 export default {
-  components: { NavLink, DropdownLink, ThemeSwitcher },
+  name: 'NavLinks',
+
+  components: {
+    NavLink,
+    DropdownLink,
+    ThemeSwitcher
+  },
 
   computed: {
     userNav () {
