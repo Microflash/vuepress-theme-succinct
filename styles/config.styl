@@ -41,4 +41,53 @@ $MQMobileNarrow = 419px
 $lineNumbersWrapperWidth = 3.5rem
 $codeLang = js ts html md vue css sass scss less stylus go java c sh yaml py docker dockerfile makefile
 
+if $fallbackTheme == 'dark'
+  $accentColorDefault = $accentColorDark
+  $textColorDefault = $textColorDark
+  $textMutedColorDefault = darken($textColorDark, 25%)
+  $selectionColorDefault = transparentify($textColorDark, $bodyBgColorDark, 0.1)
+  $headerColorDefault = darken($textColorDark, 5%)
+  $descriptionColorDefault = darken($textColorDark, 10%)
+  $borderColorDefault = $borderColorDark
+  $codeColorDefault = darken($textColorDark, 20%)
+  $codeBgColorDefault = $codeBgColorDark
+  $codeBgHighlightColorDefault = tint($codeBgColorDark, 3%)
+  $arrowBgColorDefault = $arrowBgColorDark
+  $bodyBgColorDefault = $bodyBgColorDark
+  $bodyComplementColorDefault = lighten($bodyBgColorDark, 5%)
+  $badgeTipColorDefault = $badgeTipColorDark
+  $badgeWarningColorDefault = $badgeWarningColorDark
+  $badgeWarningTextColorDefault = lighten($badgeWarningColorDark, 70%)
+  $badgeWarningTitleColorDefault = lighten($badgeWarningColorDark, 50%)
+  $badgeErrorColorDefault = $badgeErrorColorDark
+  $badgeErrorTextColorDefault = lighten($badgeErrorColorDark, 70%)
+  $badgeErrorTitleColorDefault = lighten($badgeErrorColorDark, 50%)
+  $actionBtnBorderColorDefault = darken($accentColorDark, 10%)
+  $actionBtnHoverBorderColorDefault = darken($accentColorDark, 10%)
+  $navItemHoverColorDefault = darken($accentColorDark, 8%)
+else
+  $accentColorDefault = $accentColor
+  $textColorDefault = $textColor
+  $textMutedColorDefault = lighten($textColor, 25%)
+  $selectionColorDefault = transparentify($textColor, $bodyBgColor, 0.1)
+  $headerColorDefault = lighten($textColor, 10%)
+  $descriptionColorDefault = lighten($textColor, 40%)
+  $borderColorDefault = $borderColor
+  $codeColorDefault = lighten($textColor, 20%)
+  $codeBgColorDefault = $codeBgColor
+  $codeBgHighlightColorDefault = tint($codeBgColor, 10%)
+  $arrowBgColorDefault = $arrowBgColor
+  $bodyBgColorDefault = $bodyBgColor
+  $bodyComplementColorDefault = darken($bodyBgColor, 2%)
+  $badgeTipColorDefault = $badgeTipColor
+  $badgeWarningColorDefault = $badgeWarningColor
+  $badgeWarningTextColorDefault = darken($badgeWarningColor, 70%)
+  $badgeWarningTitleColorDefault = darken($badgeWarningColor, 50%)
+  $badgeErrorColorDefault = $badgeErrorColor
+  $badgeErrorTextColorDefault = darken($badgeErrorColor, 70%)
+  $badgeErrorTitleColorDefault = darken($badgeErrorColor, 50%)
+  $actionBtnBorderColorDefault = darken($accentColor, 10%)
+  $actionBtnHoverBorderColorDefault = lighten($accentColor, 10%)
+  $navItemHoverColorDefault = lighten($accentColor, 8%)
+
 @import '~@temp/palette.styl'

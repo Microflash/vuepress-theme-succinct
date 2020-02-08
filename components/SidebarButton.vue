@@ -7,6 +7,8 @@
 </template>
 
 <style lang="stylus">
+@require '../styles/config.styl'
+
 .sidebar-button
   cursor pointer
   display none

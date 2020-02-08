@@ -70,6 +70,8 @@ export default {
 </script>
 
 <style lang="stylus">
+@require '../styles/config.styl'
+
 .sidebar-group
   .sidebar-group
     padding-left 0.5em
@@ -117,9 +119,12 @@ export default {
   &.clickable
     &.active
       font-weight 600
+      color $accentColorDefault
       color var(--accentColor)
+      border-left-color $accentColorDefault
       border-left-color var(--accentColor)
     &:hover
+      color $accentColorDefault
       color var(--accentColor)
 
 .sidebar-group-items

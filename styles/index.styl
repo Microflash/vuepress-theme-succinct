@@ -59,14 +59,18 @@
 
 *
   &::-webkit-scrollbar, &::-webkit-scrollbar-track
+    background-color $bodyComplementColorDefault
     background-color var(--bodyComplementColor)
 
   &::-webkit-scrollbar-thumb
+    background-color $selectionColorDefault
     background-color var(--selectionColor)
 
   &::-webkit-scrollbar-button
+    background-color $bodyComplementColorDefault
     background-color var(--bodyComplementColor)
 
+  scrollbar-color $selectionColorDefault $bodyComplementColorDefault
   scrollbar-color var(--selectionColor) var(--bodyComplementColor)
 
   scroll-behavior smooth
@@ -75,14 +79,17 @@
     scroll-behavior auto
 
   &::-moz-selection
+    background $selectionColorDefault
     background var(--selectionColor)
   
   &::selection
+    background $selectionColorDefault
     background var(--selectionColor)
 
 html, body
   padding 0
   margin 0
+  background-color $bodyBgColorDefault
   background-color var(--bodyBgColor)
 
 body, .theme-container
@@ -95,6 +102,7 @@ body, .theme-container
   if $textSizeAdjust
     text-size-adjust 100%
 
+  color $textColorDefault
   color var(--textColor)
 
 .page
@@ -107,8 +115,10 @@ body, .theme-container
   left 0
   right 0
   height $navbarHeight
+  background-color $bodyBgColorDefault
   background-color var(--bodyBgColor)
   box-sizing border-box
+  border-bottom 1px solid $borderColorDefault
   border-bottom 1px solid var(--borderColor)
 
 .sidebar-mask
@@ -122,6 +132,7 @@ body, .theme-container
 
 .sidebar
   font-size 16px
+  background-color $bodyBgColorDefault
   background-color var(--bodyBgColor)
   width $sidebarWidth
   position fixed
@@ -131,25 +142,35 @@ body, .theme-container
   left 0
   bottom 0
   box-sizing border-box
+  border-right 1px solid $borderColorDefault
   border-right 1px solid var(--borderColor)
   overflow-y auto
 
 .search-box
   input
+    color $textMutedColorDefault !important
     color var(--textMutedColor) !important
+    border-color $borderColorDefault !important
     border-color var(--borderColor) !important
+    background-color $bodyBgColorDefault !important
     background-color var(--bodyBgColor) !important
     &:focus
+      border-color $accentColorDefault !important
       border-color var(--accentColor) !important
   .suggestions
+    background $bodyBgColorDefault !important
     background var(--bodyBgColor) !important
+    border-color $borderColorDefault !important
     border-color var(--borderColor) !important
   .suggestion
     a
+      color $textMutedColorDefault !important
       color var(--textMutedColor) !important
     &.focused
+      background-color $bodyComplementColorDefault !important
       background-color var(--bodyComplementColor) !important
       a
+        color $accentColorDefault !important
         color var(--accentColor) !important
 
 {$contentClass}:not(.custom)
@@ -162,6 +183,7 @@ body, .theme-container
 
   p.demo
     padding 1rem 1.5rem
+    border 1px solid $borderColorDefault
     border 1px solid var(--borderColor)
     border-radius 4px
 
@@ -177,23 +199,30 @@ body, .theme-container
 
 a
   font-weight 500
+  color $accentColorDefault
   color var(--accentColor)
   text-decoration none
 
 p a code
   font-weight 400
+  color $accentColorDefault
   color var(--accentColor)
 
 kbd
+  background $textMutedColorDefault
   background var(--textMutedColor)
+  border solid 0.15rem $borderColorDefault
   border solid 0.15rem var(--borderColor)
+  border-bottom solid 0.25rem $borderColorDefault
   border-bottom solid 0.25rem var(--borderColor)
   border-radius 0.15rem
   padding 0 0.15em
 
 blockquote
   font-size inherit
+  color $textMutedColorDefault
   color var(--textMutedColor)
+  border-left .2rem solid $borderColorDefault
   border-left .2rem solid var(--borderColor)
   margin 0.5rem 0
   padding .25rem 0 .25rem 1rem
@@ -232,6 +261,7 @@ h1
 h2
   font-size 1.65rem
   padding-bottom .3rem
+  border-bottom 1px solid $borderColorDefault
   border-bottom 1px solid var(--borderColor)
 
 h3
@@ -256,6 +286,7 @@ p, ul, ol
 
 hr
   border 0
+  border-top 1px solid $borderColorDefault
   border-top 1px solid var(--borderColor)
 
 table
@@ -265,12 +296,15 @@ table
   overflow-x: auto
 
 tr
+  border-top 1px solid $borderColorDefault
   border-top 1px solid var(--borderColor)
 
   &:nth-child(2n)
+    background-color $bodyComplementColorDefault
     background-color var(--bodyComplementColor)
 
 th, td
+  border 1px solid $borderColorDefault
   border 1px solid var(--borderColor)
   padding .6em 1em
 
