@@ -33,3 +33,20 @@
     a
       color $textMutedColorDefault
       color var(--textMutedColor)
+  &.details
+    display block
+    position relative
+    border-radius 6px
+    margin 1em 0
+    padding 1.5em
+    background-color $selectionColorDefault
+    background-color var(--selectionColor)
+    h4
+      margin-top 0
+    figure, p
+      &:last-child
+        margin-bottom 0
+        padding-bottom 0
+    summary
+      outline none
+      cursor pointer

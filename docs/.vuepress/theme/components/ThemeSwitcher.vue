@@ -1,7 +1,8 @@
 <template>
   <a role="button" @click.prevent="switchTheme()" :aria-label="'Switch to ' + nextTheme + ' mode'" class="nav-link">
     <span key="dark" v-if="theme === 'dark'">Switch to light mode</span>
-    <span key="light" v-else>Switch to dark mode</span>
+    <span key="light" v-else-if="theme === 'light'">Switch to dark mode</span>
+    <span key="light" v-else>Switch theme</span>
   </a>
 </template>
 
@@ -13,7 +14,7 @@ export default {
 
   data () {
     return {
-      theme: 'light'
+      theme: ''
     }
   },
 

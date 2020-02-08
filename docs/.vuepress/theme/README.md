@@ -1,6 +1,6 @@
 # vuepress-theme-succinct
 
-[![Vuepress 1.2.0](https://img.shields.io/badge/vuepress-1.2.0-blue.svg)](https://github.com/vuejs/vuepress)
+[![Vuepress](https://img.shields.io/github/package-json/dependency-version/Microflash/vuepress-theme-succinct/@vuepress/plugin-search?label=vuepress)](https://github.com/vuejs/vuepress)
 [![npm](https://img.shields.io/npm/v/vuepress-theme-succinct)](https://www.npmjs.com/package/vuepress-theme-succinct)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
