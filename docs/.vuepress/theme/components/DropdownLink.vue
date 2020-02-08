@@ -104,6 +104,8 @@ export default {
 </script>
 
 <style lang="stylus">
+@require '../styles/config.styl'
+
 .dropdown-wrapper
   cursor pointer
   .dropdown-title
@@ -116,6 +118,7 @@ export default {
     background transparent
     border none
     font-weight 500
+    color $textColorDefault
     color var(--textColor)
     &:hover
       border-color transparent
@@ -129,6 +132,7 @@ export default {
       line-height 1.7rem
       h4
         margin 0.45rem 0 0
+        border-top 1px solid $borderColorDefault
         border-top 1px solid var(--borderColor)
         padding 0.45rem 1.5rem 0 1.25rem
       .dropdown-subitem-wrapper
@@ -145,13 +149,16 @@ export default {
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem
         &:hover
+          color $accentColorDefault
           color var(--accentColor)
         &.router-link-active
+          color $accentColorDefault
           color var(--accentColor)
           &::after
             content ""
             width 0
             height 0
+            border-left 5px solid $accentColorDefault
             border-left 5px solid var(--accentColor)
             border-top 3px solid transparent
             border-bottom 3px solid transparent
@@ -171,6 +178,7 @@ export default {
       font-weight 600
       font-size inherit
       &:hover
+        color $accentColorDefault
         color var(--accentColor)
     .nav-dropdown
       transition height .1s ease-out
@@ -200,6 +208,7 @@ export default {
       // make the arrow always down at desktop
       border-left 4px solid transparent
       border-right 4px solid transparent
+      border-top 6px solid $arrowBgColorDefault
       border-top 6px solid var(--arrowBgColor)
       border-bottom 0
     .nav-dropdown
@@ -212,8 +221,10 @@ export default {
       position absolute
       top 100%
       right 0
+      background-color $bodyBgColorDefault
       background-color var(--bodyBgColor)
       padding 0.6rem 0
+      border 1px solid $borderColorDefault
       border 1px solid var(--borderColor)
       text-align left
       border-radius 0.25rem

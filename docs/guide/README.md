@@ -10,10 +10,6 @@ title: Installation
 
 [vuepress-theme-succinct](https://github.com/Microflash/vuepress-theme-succinct) uses [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query and [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) to generate dark and light themes.
 
-### Compatibility
-
-The support for [prefers-color-scheme](https://caniuse.com/#feat=prefers-color-scheme) and [CSS Variables](https://caniuse.com/#feat=css-variables) may vary depending on your browser and operating system.
-
 ## Get Started
 
 Add the dependency to your existing Vuepress project via Yarn or NPM.

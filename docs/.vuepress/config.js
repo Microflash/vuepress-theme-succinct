@@ -19,6 +19,7 @@ module.exports = {
         collapsable: false,
         children: [
           '/guide/',
+          '/guide/compatibility',
           '/guide/configuration'
         ]
       }
