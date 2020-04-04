@@ -2,24 +2,24 @@
 # yarn lockfile v1
 
 
-"@vuepress/plugin-active-header-links@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.3.0.tgz#8b4184e7c84a5ee754e6b4f34997c3bd7ae07b72"
-  integrity sha512-C+EhZefAOxN83jVZebRWqFUBUklTsTtWRiDFczxcxqH995ZZumi1UFKj9TurOjrZppUDr4ftfxIqGkj4QSUeWw==
+"@vuepress/plugin-active-header-links@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.4.0.tgz#b43fdad67ef42c383a84642f7914e22c56189089"
+  integrity sha512-UWnRcqJZnX1LaPHxESx4XkRVJCleWvdGlSVivRGNLZuV1xrxJzB6LC86SNMur+imoyzeQL/oIgKY1QFx710g8w==
   dependencies:
     lodash.debounce "^4.0.8"
 
-"@vuepress/plugin-nprogress@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-nprogress/-/plugin-nprogress-1.3.0.tgz#8cdb7cc7b881e838035b2041e209da959998b8e2"
-  integrity sha512-PuBDAhaYLvwG63LamIc1fMk+s4kUqPuvNYKfZjQlF3LtXjlCMvd6YEQyogfB9cZnFOg1nryeHJwWoAdFvzw29Q==
+"@vuepress/plugin-nprogress@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-nprogress/-/plugin-nprogress-1.4.0.tgz#90bb16ab8d43321e5911dea489986de25adb56d1"
+  integrity sha512-hJ9phJHONWWZqcWztbVtmmRjZduHQHIOBifUBvAfAGcuOBLVHqRnv3i7XD5UB3MIWPM1/bAoTA2TVs4sb9Wg4Q==
   dependencies:
     nprogress "^0.2.0"
 
-"@vuepress/plugin-search@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-search/-/plugin-search-1.3.0.tgz#ec3619a2d70696f7f91575121f4b7409ba229d07"
-  integrity sha512-buoQ6gQ2MLbLQ7Nhg5KJWPzKo7NtvdK/e6Fo1ig/kbOG5HyYKHCyqLjbQ/ZqT+fGbaSeEjH3DaVYTNx55GRX5A==
+"@vuepress/plugin-search@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-search/-/plugin-search-1.4.0.tgz#26a02e3409e6ea6830f9fc7e6d87fc45ba46c579"
+  integrity sha512-5K02DL9Wqlfy/aNiYXdbXBOGzR9zMNKz/P8lfHDU+ZOjtfNf6ImAdUkHS4pi70YkkTuemdYM8JjG/j5UYn6Rjw==
 
 abbrev@1:
   version "1.1.1"

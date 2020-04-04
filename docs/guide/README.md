@@ -8,7 +8,7 @@ title: Installation
 ![npm](https://img.shields.io/npm/v/vuepress-theme-succinct)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
-[vuepress-theme-succinct](https://github.com/Microflash/vuepress-theme-succinct) uses [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query and [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) to generate dark and light themes.
+[Succinct](https://github.com/Microflash/vuepress-theme-succinct) uses [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query and [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) to generate dark and light themes.
 
 ## Get Started
 

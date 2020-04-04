@@ -48,7 +48,7 @@ $MQMobileNarrow = 419px
 ```
 
 ::: tip
-It is recommended that you define a color vaariable, say `$textColor` alongwith its dark variant `$textColorDark`.
+It is recommended that you define a color variable, say `$textColor` alongwith its dark variant `$textColorDark`.
 :::
 
 ## Typography
