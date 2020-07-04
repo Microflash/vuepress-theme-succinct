@@ -9,7 +9,7 @@ A slightly opinionated theme for Vuepress
 ## Features
 
 - **Customizable typography**: Import and use your favorite web-fonts. Customize font sizes and text-adjustment for body text
-- **Dark and light themes**: With a theme-switcher and native theme detection to set the theme automatically as per the user preference
+- **Dark and light themes**: System theme detection with a theme-switcher to set the theme as per the user preference
 - **Accessible**: Succinct applies tweaks - deeper contrast, better legibility preferences, etc - to improve the readability
 
 ## Get Started
@@ -59,5 +59,5 @@ This theme has the following plugins built in:
 
 Nods to people and projects that made `succinct` possible.
 
-- Official [Vuepress theme](https://github.com/vuejs/vuepress/tree/master/packages/%40vuepress/theme-default) `succinct` is based on.
-- [Tommy Vedvik](https://github.com/tomtev)'s implementation of theme switcher on the official [Gridsome](https://gridsome.org/) website.
+- Official [Vuepress theme](https://github.com/vuejs/vuepress/tree/master/packages/%40vuepress/theme-default)
+- [Tommy Vedvik](https://github.com/tomtev)'s implementation of theme switcher on the official [Gridsome](https://gridsome.org/) website

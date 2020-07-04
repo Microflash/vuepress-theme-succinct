@@ -109,6 +109,7 @@ export default {
       border-left none
 
 .sidebar-heading
+  color $textColor
   color var(--textColor)
   transition color .15s ease
   cursor pointer
