@@ -47,6 +47,10 @@ module.exports = {
 
 Check out the [documentation](https://microflash.github.io/vuepress-theme-succinct/) built with Vuepress and Succinct :smile: for more details.
 
+## Contribute
+
+Contributions from the community are welcome and deeply appreciated. Refer to the [contribution guidelines](./CONTRIBUTING.md) to get started.
+
 ## Plugins
 
 This theme has the following plugins built in:
