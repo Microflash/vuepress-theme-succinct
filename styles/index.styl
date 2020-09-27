@@ -32,6 +32,7 @@ for f in $themeFont
   --badgeErrorTitleColor darken($badgeErrorColor, 50%)
   --actionBtnBorderColor darken($accentColor, 10%)
   --actionBtnHoverBorderColor lighten($accentColor, 10%)
+  --codeBlockActiveColor darken($accentColor, 35%)
   --navItemHoverColor lighten($accentColor, 8%)
 
 [data-theme='dark']
@@ -57,6 +58,7 @@ for f in $themeFont
   --badgeErrorTitleColor lighten($badgeErrorColorDark, 50%)
   --actionBtnBorderColor darken($accentColorDark, 10%)
   --actionBtnHoverBorderColor darken($accentColorDark, 10%)
+  --codeBlockActiveColor darken($accentColor, 35%)
   --navItemHoverColor darken($accentColorDark, 8%)
 
 *
@@ -286,6 +288,19 @@ th, td
   border 1px solid
   borderColor $borderColorDefault var(--borderColor)
   padding .6em 1em
+
+.theme-code-group__nav
+  margin-bottom -15px !important
+  bgColor $codeBgHighlightColorDefault var(--codeBgHighlightColor) true
+
+.theme-code-group__nav-tab
+  padding-right 10px !important
+  padding-left 10px !important
+
+.theme-code-group__nav-tab-active
+  bgColor $codeBlockActiveColorDefault var(--codeBlockActiveColor) true
+  outlineColor $codeBlockActiveColorDefault var(--codeBlockActiveColor) true
+  border none !important
 
 .theme-container
   &.sidebar-open
