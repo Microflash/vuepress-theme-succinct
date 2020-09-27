@@ -24,6 +24,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@require '../styles/fallback'
+
 .badge
   display inline-block
   font-size 14px
@@ -34,14 +36,11 @@ export default {
   color white
   background-color #42b983
   &.tip, &.green
-    background-color $badgeTipColorDefault
-    background-color var(--badgeTipColor)
+    bgColor $badgeTipColorDefault var(--badgeTipColor)
   &.error
-    background-color $badgeErrorColorDefault
-    background-color var(--badgeErrorColor)
+    bgColor $badgeErrorColorDefault var(--badgeErrorColor)
   &.warning, &.warn, &.yellow
-    background-color $badgeWarningColorDefault
-    background-color var(--badgeWarningColor)
+    bgColor $badgeWarningColorDefault var(--badgeWarningColor)
   & + &
     margin-left 5px
 </style>

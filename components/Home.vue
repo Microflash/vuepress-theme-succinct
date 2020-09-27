@@ -84,7 +84,8 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/config.styl'
+@require '../styles/config'
+@require '../styles/fallback'
 
 .home
   padding $navbarHeight 2rem 0
@@ -106,27 +107,23 @@ export default {
       max-width 40rem
       font-size 1.6rem
       line-height 1.3
-      color $descriptionColorDefault
-      color var(--descriptionColor)
+      text $descriptionColorDefault var(--descriptionColor)
     .action-button
       display inline-block
       font-size 1.2rem
-      color $bodyBgColorDefault
-      color var(--bodyBgColor)
-      background-color $accentColorDefault
-      background-color var(--accentColor)
+      text $bodyBgColorDefault var(--bodyBgColor)
+      bgColor $accentColorDefault var(--accentColor)
       padding 0.6rem 1.4rem
       border-radius 40px
       transition background-color .1s ease
       box-sizing border-box
-      border-bottom 1px solid $actionBtnBorderColorDefault
-      border-bottom 1px solid var(--actionBtnBorderColor)
+      border-bottom 1px solid
+      borderBottomColor $actionBtnBorderColorDefault var(--actionBtnBorderColor)
       &:hover
-        background-color $actionBtnHoverBorderColorDefault
-        background-color var(--actionBtnHoverBorderColor)
+        bgColor $actionBtnHoverBorderColorDefault var(--actionBtnHoverBorderColor)
   .features
-    border-top 1px solid $borderColorDefault
-    border-top 1px solid var(--borderColor)
+    border-top 1px solid
+    borderTopColor $borderColorDefault var(--borderColor)
     padding 1.2rem 0
     margin-top 2.5rem
     display flex
@@ -143,18 +140,15 @@ export default {
       font-weight 500
       border-bottom none
       padding-bottom 0
-      color $headerColorDefault
-      color var(--headerColor)
+      text $headerColorDefault var(--headerColor)
     p
-      color $textMutedColorDefault
-      color var(--textMutedColor)
+      text $textMutedColorDefault var(--textMutedColor)
   .footer
     padding 2.5rem
-    border-top 1px solid $borderColorDefault
-    border-top 1px solid var(--borderColor)
+    border-top 1px solid
+    borderTopColor $borderColorDefault var(--borderColor)
     text-align center
-    color $textMutedColorDefault
-    color var(--textMutedColor)
+    text $textMutedColorDefault var(--textMutedColor)
 
 @media (max-width: $MQMobile)
   .home

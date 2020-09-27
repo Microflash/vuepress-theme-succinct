@@ -108,8 +108,9 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/wrapper.styl'
-@require '../styles/config.styl'
+@require '../styles/wrapper'
+@require '../styles/config'
+@require '../styles/fallback'
 
 .page-edit
   @extend $wrapper
@@ -120,16 +121,14 @@ export default {
   .edit-link
     display inline-block
     a
-      color $textMutedColorDefault
-      color var(--textMutedColor)
+      text $textMutedColorDefault var(--textMutedColor)
       margin-right 0.25rem
   .last-updated
     float right
     font-size 0.9em
     .prefix
       font-weight 500
-      color $textMutedColorDefault
-      color var(--textMutedColor)
+      text $textMutedColorDefault var(--textMutedColor)
     .time
       font-weight 400
       color #aaa

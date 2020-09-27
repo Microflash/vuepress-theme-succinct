@@ -146,8 +146,9 @@ function flatten (items, res) {
 </script>
 
 <style lang="stylus">
-@require '../styles/wrapper.styl'
-@require '../styles/config.styl'
+@require '../styles/wrapper'
+@require '../styles/config'
+@require '../styles/fallback'
 
 .page-nav
   @extend $wrapper
@@ -156,8 +157,8 @@ function flatten (items, res) {
   .inner
     min-height 2rem
     margin-top 0
-    border-top 1px solid $borderColorDefault
-    border-top 1px solid var(--borderColor)
+    border-top 1px solid
+    borderTopColor $borderColorDefault var(--borderColor)
     padding-top 1rem
     overflow auto // clear float
   .next

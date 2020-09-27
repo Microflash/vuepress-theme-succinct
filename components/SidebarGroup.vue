@@ -80,7 +80,8 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/config.styl'
+@require '../styles/config'
+@require '../styles/fallback'
 
 .sidebar-group
   .sidebar-group
@@ -109,8 +110,7 @@ export default {
       border-left none
 
 .sidebar-heading
-  color $textColor
-  color var(--textColor)
+  text $textColor var(--textColor)
   transition color .15s ease
   cursor pointer
   font-size 1.1em
@@ -130,13 +130,10 @@ export default {
   &.clickable
     &.active
       font-weight 600
-      color $accentColorDefault
-      color var(--accentColor)
-      border-left-color $accentColorDefault
-      border-left-color var(--accentColor)
+      text $accentColorDefault var(--accentColor)
+      borderLeftColor $accentColorDefault var(--accentColor)
     &:hover
-      color $accentColorDefault
-      color var(--accentColor)
+      text $accentColorDefault var(--accentColor)
 
 .sidebar-group-items
   transition height .1s ease-out

@@ -76,7 +76,8 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/config.styl'
+@require '../styles/config'
+@require '../styles/fallback'
 
 .algolia-search-wrapper
   & > span
@@ -84,71 +85,57 @@ export default {
   .algolia-autocomplete
     line-height normal
     .ds-dropdown-menu
-      background-color $bodyBgColorDefault
-      background-color var(--bodyBgColor)
-      border 1px solid $borderColorDefault
-      border 1px solid var(--borderColor)
+      bgColor $bodyBgColorDefault var(--bodyBgColor)
+      border 1px solid
+      borderColor $borderColorDefault var(--borderColor)
       border-radius 4px
       font-size 16px
       margin 6px 0 0
       padding 4px
       text-align left
       &:before
-        border-color $borderColorDefault
-        border-color var(--borderColor)
+        borderColor $borderColorDefault var(--borderColor)
       [class*=ds-dataset-]
         border none
         padding 0
       .ds-suggestions
         margin-top 0
       .ds-suggestion
-        border-bottom 1px solid $borderColorDefault
-        border-bottom 1px solid var(--borderColor)
+        border-bottom 1px solid
+        borderBottomColor $borderColorDefault var(--borderColor)
     .algolia-docsearch-suggestion--highlight
-      color $headerColorDefault
-      color var(--headerColor)
+      text $headerColorDefault var(--headerColor)
     .algolia-docsearch-suggestion
-      border-color $borderColorDefault
-      border-color var(--borderColor)
+      borderColor $borderColorDefault var(--borderColor)
       padding 0
       .algolia-docsearch-suggestion--category-header
         padding 5px 10px
         margin-top 0
-        background $accentColorDefault
-        background var(--accentColor)
-        color $textColorDefault
-        color var(--textColor)
+        bg $accentColorDefault var(--accentColor)
+        text $textColorDefault var(--textColor)
         font-weight 600
         .algolia-docsearch-suggestion--highlight
-          background $arrowBgColorDefault
-          background var(--arrowBgColor)
+          bg $arrowBgColorDefault var(--arrowBgColor)
       .algolia-docsearch-suggestion--wrapper
         padding 0
       .algolia-docsearch-suggestion--title
         font-weight 600
         margin-bottom 0
-        color $textColorDefault
-        color var(--textColor)
+        text $textColorDefault var(--textColor)
       .algolia-docsearch-suggestion--subcategory-column
         vertical-align top
         padding 5px 7px 5px 5px
-        border-color $borderColorDefault
-        border-color var(--borderColor)
-        background $bodyBgColorDefault
-        background var(--bodyBgColor)
+        borderColor $borderColorDefault var(--borderColor)
+        bg $bodyBgColorDefault var(--bodyBgColor)
         &:after
           display none
       .algolia-docsearch-suggestion--subcategory-column-text
-        color $textColorDefault
-        color var(--textColor)
+        text $textColorDefault var(--textColor)
     .algolia-docsearch-footer
-      border-color $borderColorDefault
-      border-color var(--borderColor)
+      borderColor $borderColorDefault var(--borderColor)
     .ds-cursor .algolia-docsearch-suggestion--content
-      background-color $arrowBgColorDefault !important
-      background-color var(--arrowBgColor) !important
-      color $textColorDefault
-      color var(--textColor)
+      bgColor $arrowBgColorDefault var(--arrowBgColor) true
+      text $textColorDefault var(--textColor)
 
 @media (min-width: $MQMobile)
   .algolia-search-wrapper
@@ -176,8 +163,7 @@ export default {
       padding 5px 7px 5px 5px !important
     .algolia-docsearch-suggestion--subcategory-column
       padding 0 !important
-      background $arrowBgColorDefault !important
-      background var(--arrowBgColor) !important
+      bg $arrowBgColorDefault var(--arrowBgColor) true
     .algolia-docsearch-suggestion--subcategory-column-text:after
       content " > "
       font-size 10px
