@@ -7,6 +7,17 @@
       class="dropdown-title"
       type="button"
       :aria-label="dropdownAriaLabel"
+      @click="handleDropdown"
+    >
+      <span class="title">{{ item.text }}</span>
+      <span
+        class="arrow down"
+      />
+    </button>
+    <button
+      class="mobile-dropdown-title"
+      type="button"
+      :aria-label="dropdownAriaLabel"
       @click="setOpen(!open)"
     >
       <span class="title">{{ item.text }}</span>
@@ -105,13 +116,25 @@ export default {
 
     isLastItemOfArray (item, array) {
       return last(array) === item
+    },
+
+    /**
+     * Open the dropdown when user tab and click from keyboard.
+     *
+     * Use event.detail to detect tab and click from keyboard. Ref: https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
+     * The Tab + Click is UIEvent > KeyboardEvent, so the detail is 0.
+     */
+    handleDropdown () {
+      const isTriggerByTab = event.detail === 0
+      if (isTriggerByTab) this.setOpen(!this.open)
     }
   }
 }
 </script>
 
 <style lang="stylus">
-@require '../styles/config.styl'
+@require '../styles/config'
+@require '../styles/fallback'
 
 .dropdown-wrapper
   cursor pointer
@@ -125,22 +148,28 @@ export default {
     background transparent
     border none
     font-weight 500
-    color $textColorDefault
-    color var(--textColor)
+    text $textColorDefault var(--textColor)
     &:hover
       border-color transparent
     .arrow
       vertical-align middle
       margin-top -1px
       margin-left 0.4rem
+  .mobile-dropdown-title
+    @extends .dropdown-title
+    display none
+    font-weight 600
+    font-size inherit
+      &:hover
+        text $accentColorDefault var(--accentColor)
   .nav-dropdown
     .dropdown-item
       color inherit
       line-height 1.7rem
       h4
         margin 0.45rem 0 0
-        border-top 1px solid $borderColorDefault
-        border-top 1px solid var(--borderColor)
+        border-top 1px solid
+        borderTopColor $borderColorDefault var(--borderColor)
         padding 0.45rem 1.5rem 0 1.25rem
       .dropdown-subitem-wrapper
         padding 0
@@ -156,17 +185,15 @@ export default {
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem
         &:hover
-          color $accentColorDefault
-          color var(--accentColor)
+          text $accentColorDefault var(--accentColor)
         &.router-link-active
-          color $accentColorDefault
-          color var(--accentColor)
+          text $accentColorDefault var(--accentColor)
           &::after
             content ""
             width 0
             height 0
-            border-left 5px solid $accentColorDefault
-            border-left 5px solid var(--accentColor)
+            border-left 5px solid
+            borderLeftColor $accentColorDefault var(--accentColor)
             border-top 3px solid transparent
             border-bottom 3px solid transparent
             position absolute
@@ -182,11 +209,9 @@ export default {
     &.open .dropdown-title
       margin-bottom 0.5rem
     .dropdown-title
-      font-weight 600
-      font-size inherit
-      &:hover
-        color $accentColorDefault
-        color var(--accentColor)
+      display: none
+    .mobile-dropdown-title
+      display: block
     .nav-dropdown
       transition height .1s ease-out
       overflow hidden
@@ -211,13 +236,6 @@ export default {
       display block !important
     &.open:blur
       display none
-    .dropdown-title .arrow
-      // make the arrow always down at desktop
-      border-left 4px solid transparent
-      border-right 4px solid transparent
-      border-top 6px solid $arrowBgColorDefault
-      border-top 6px solid var(--arrowBgColor)
-      border-bottom 0
     .nav-dropdown
       display none
       // Avoid height shaked by clicking
@@ -228,11 +246,10 @@ export default {
       position absolute
       top 100%
       right 0
-      background-color $bodyBgColorDefault
-      background-color var(--bodyBgColor)
+      bgColor $bodyBgColorDefault var(--bodyBgColor)
       padding 0.6rem 0
-      border 1px solid $borderColorDefault
-      border 1px solid var(--borderColor)
+      border 1px solid
+      borderColor $borderColorDefault var(--borderColor)
       text-align left
       border-radius 0.25rem
       white-space nowrap

@@ -20,7 +20,7 @@
 </template>
 
 <style lang="stylus">
-@require '../styles/config.styl'
+@require '../styles/config'
 
 .sidebar-button
   cursor pointer

@@ -132,7 +132,8 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/config.styl'
+@require '../styles/config'
+@require '../styles/fallback'
 
 .nav-links
   display inline-block
@@ -141,8 +142,7 @@ export default {
     line-height 1.4rem
     color inherit
     &:hover, &.router-link-active
-      color $accentColorDefault
-      color var(--accentColor)
+      text $accentColorDefault var(--accentColor)
   .nav-item
     position relative
     display inline-block
@@ -161,11 +161,10 @@ export default {
 @media (min-width: $MQMobile)
   .nav-links a
     &:hover, &.router-link-active
-      color $textColorDefault
-      color var(--textColor)
+      text $textColorDefault var(--textColor)
   .nav-item > a:not(.external)
     &:hover, &.router-link-active
       margin-bottom -2px
-      border-bottom 2px solid $navItemHoverColorDefault
-      border-bottom 2px solid var(--navItemHoverColor)
+      border-bottom 2px solid
+      borderBottomColor $navItemHoverColorDefault var(--navItemHoverColor)
 </style>

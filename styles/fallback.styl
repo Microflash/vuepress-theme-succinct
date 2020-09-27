@@ -1,0 +1,35 @@
+substitute(prop, calculated, declared, important=false)
+  if important
+    {prop} calculated !important
+    {prop} declared !important
+  else
+    {prop} calculated
+    {prop} declared
+
+text(calculated, declared, important=false)
+  substitute('color', calculated, declared, important)
+
+bg(calculated, declared, important=false)
+  substitute('background', calculated, declared, important)
+
+bgColor(calculated, declared, important=false)
+  substitute('background-color', calculated, declared, important)
+
+outlineColor(calculated, declared, important=false)
+  substitute('outline-color', calculated, declared, important)
+
+borderColor(calculated, declared, important=false)
+  substitute('border-color', calculated, declared, important)
+
+borderTopColor(calculated, declared, important=false)
+  substitute('border-top-color', calculated, declared, important)
+
+borderRightColor(calculated, declared, important=false)
+  substitute('border-right-color', calculated, declared, important)
+
+borderBottomColor(calculated, declared, important=false)
+  substitute('border-bottom-color', calculated, declared, important)
+
+borderLeftColor(calculated, declared, important=false)
+  substitute('border-left-color', calculated, declared, important)
+

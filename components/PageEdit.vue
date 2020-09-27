@@ -80,8 +80,8 @@ export default {
   methods: {
     createEditLink (repo, docsRepo, docsDir, docsBranch, path) {
       const bitbucket = /bitbucket.org/
-      if (bitbucket.test(repo)) {
-        const base = outboundRE.test(docsRepo) ? docsRepo : repo
+      if (bitbucket.test(docsRepo)) {
+        const base = docsRepo
         return (
           base.replace(endingSlashRE, '')
           + `/src`
@@ -92,12 +92,24 @@ export default {
         )
       }
 
+      const gitlab = /gitlab.com/
+      if (gitlab.test(docsRepo)) {
+        const base = docsRepo
+        return (
+          base.replace(endingSlashRE, '')
+          + `/-/edit`
+          + `/${docsBranch}/`
+          + (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '')
+          + path
+        )
+      }
+
       const base = outboundRE.test(docsRepo)
         ? docsRepo
         : `https://github.com/${docsRepo}`
       return (
         base.replace(endingSlashRE, '')
-        + `/edit`
+        + '/edit'
         + `/${docsBranch}/`
         + (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '')
         + path
@@ -108,8 +120,9 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/wrapper.styl'
-@require '../styles/config.styl'
+@require '../styles/wrapper'
+@require '../styles/config'
+@require '../styles/fallback'
 
 .page-edit
   @extend $wrapper
@@ -120,16 +133,14 @@ export default {
   .edit-link
     display inline-block
     a
-      color $textMutedColorDefault
-      color var(--textMutedColor)
+      text $textMutedColorDefault var(--textMutedColor)
       margin-right 0.25rem
   .last-updated
     float right
     font-size 0.9em
     .prefix
       font-weight 500
-      color $textMutedColorDefault
-      color var(--textMutedColor)
+      text $textMutedColorDefault var(--textMutedColor)
     .time
       font-weight 400
       color #aaa

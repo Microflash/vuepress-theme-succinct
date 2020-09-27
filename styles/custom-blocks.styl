@@ -1,3 +1,5 @@
+@require './fallback'
+
 .custom-block
   .custom-block-title
     font-weight 600
@@ -9,38 +11,28 @@
     border-radius 6px
     margin 1rem 0
   &.tip
-    background-color $badgeTipColorDefault
-    background-color var(--badgeTipColor)
+    bgColor $badgeTipColorDefault var(--badgeTipColor)
   &.warning
-    background-color $badgeWarningColorDefault
-    background-color var(--badgeWarningColor)
-    color $badgeWarningTextColorDefault
-    color var(--badgeWarningTextColor)
+    bgColor $badgeWarningColorDefault var(--badgeWarningColor)
+    text $badgeWarningTextColorDefault var(--badgeWarningTextColor)
     .custom-block-title
-      color $badgeWarningTitleColorDefault
-      color var(--badgeWarningTitleColor)
+      text $badgeWarningTitleColorDefault var(--badgeWarningTitleColor)
     a
-      color $textMutedColorDefault
-      color var(--textMutedColor)
+      text $textMutedColorDefault var(--textMutedColor)
   &.danger
-    background-color $badgeErrorColorDefault
-    background-color var(--badgeErrorColor)
-    color $badgeErrorTextColorDefault
-    color var(--badgeErrorTextColor)
+    bgColor $badgeErrorColorDefault var(--badgeErrorColor)
+    text $badgeErrorTextColorDefault var(--badgeErrorTextColor)
     .custom-block-title
-      color $badgeErrorTitleColorDefault
-      color var(--badgeErrorTitleColor)
+      text $badgeErrorTitleColorDefault var(--badgeErrorTitleColor)
     a
-      color $textMutedColorDefault
-      color var(--textMutedColor)
+      text $textMutedColorDefault var(--textMutedColor)
   &.details
     display block
     position relative
     border-radius 6px
     margin 1em 0
     padding 1.5em
-    background-color $selectionColorDefault
-    background-color var(--selectionColor)
+    bgColor $selectionColorDefault var(--selectionColor)
     h4
       margin-top 0
     figure, p

@@ -93,7 +93,8 @@ function css (el, property) {
 </script>
 
 <style lang="stylus">
-@require '../styles/config.styl'
+@require '../styles/config'
+@require '../styles/fallback'
 
 $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
@@ -111,12 +112,12 @@ $navbar-horizontal-padding = 1.5rem
   .site-name
     font-size 1.3rem
     font-weight 600
-    color $textColorDefault
-    color var(--textColor)
+    text $textColorDefault var(--textColor)
     position relative
   .links
     padding-left 1.5rem
     box-sizing border-box
+    bgColor $bodyBgColorDefault var(--bodyBgColor)
     white-space nowrap
     font-size 0.9rem
     position absolute

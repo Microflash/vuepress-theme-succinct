@@ -4,6 +4,7 @@
 @require './arrow'
 @require './wrapper'
 @require './toc'
+@require './fallback'
 
 for f in $themeFont
   @import url(f)
@@ -31,6 +32,7 @@ for f in $themeFont
   --badgeErrorTitleColor darken($badgeErrorColor, 50%)
   --actionBtnBorderColor darken($accentColor, 10%)
   --actionBtnHoverBorderColor lighten($accentColor, 10%)
+  --codeBlockActiveColor darken($accentColor, 35%)
   --navItemHoverColor lighten($accentColor, 8%)
 
 [data-theme='dark']
@@ -56,20 +58,18 @@ for f in $themeFont
   --badgeErrorTitleColor lighten($badgeErrorColorDark, 50%)
   --actionBtnBorderColor darken($accentColorDark, 10%)
   --actionBtnHoverBorderColor darken($accentColorDark, 10%)
+  --codeBlockActiveColor darken($accentColor, 35%)
   --navItemHoverColor darken($accentColorDark, 8%)
 
 *
   &::-webkit-scrollbar, &::-webkit-scrollbar-track
-    background-color $bodyComplementColorDefault
-    background-color var(--bodyComplementColor)
+    bgColor $bodyComplementColorDefault var(--bodyComplementColor)
 
   &::-webkit-scrollbar-thumb
-    background-color $selectionColorDefault
-    background-color var(--selectionColor)
+    bgColor $selectionColorDefault var(--selectionColor)
 
   &::-webkit-scrollbar-button
-    background-color $bodyComplementColorDefault
-    background-color var(--bodyComplementColor)
+    bgColor $bodyComplementColorDefault var(--bodyComplementColor)
 
   scrollbar-color $selectionColorDefault $bodyComplementColorDefault
   scrollbar-color var(--selectionColor) var(--bodyComplementColor)
@@ -80,18 +80,15 @@ for f in $themeFont
     scroll-behavior auto
 
   &::-moz-selection
-    background $selectionColorDefault
-    background var(--selectionColor)
+    bg $selectionColorDefault var(--selectionColor)
   
   &::selection
-    background $selectionColorDefault
-    background var(--selectionColor)
+    bg $selectionColorDefault var(--selectionColor)
 
 html, body
   padding 0
   margin 0
-  background-color $bodyBgColorDefault
-  background-color var(--bodyBgColor)
+  bgColor $bodyBgColorDefault var(--bodyBgColor)
 
 body, .theme-container
   font-family $bodyFontFamily, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
@@ -103,8 +100,7 @@ body, .theme-container
   if $textSizeAdjust
     text-size-adjust 100%
 
-  color $textColorDefault
-  color var(--textColor)
+  text $textColorDefault var(--textColor)
 
 .page
   padding-left $sidebarWidth
@@ -116,11 +112,10 @@ body, .theme-container
   left 0
   right 0
   height $navbarHeight
-  background-color $bodyBgColorDefault
-  background-color var(--bodyBgColor)
+  bgColor $bodyBgColorDefault var(--bodyBgColor)
   box-sizing border-box
-  border-bottom 1px solid $borderColorDefault
-  border-bottom 1px solid var(--borderColor)
+  border-bottom 1px solid
+  borderBottomColor $borderColorDefault var(--borderColor)
 
 .sidebar-mask
   position fixed
@@ -133,8 +128,7 @@ body, .theme-container
 
 .sidebar
   font-size 16px
-  background-color $bodyBgColorDefault
-  background-color var(--bodyBgColor)
+  bgColor $bodyBgColorDefault var(--bodyBgColor)
   width $sidebarWidth
   position fixed
   z-index 10
@@ -143,36 +137,27 @@ body, .theme-container
   left 0
   bottom 0
   box-sizing border-box
-  border-right 1px solid $borderColorDefault
-  border-right 1px solid var(--borderColor)
+  border-right 1px solid
+  borderRightColor $borderColorDefault var(--borderColor)
   overflow-y auto
 
 .search-box
   input
-    color $textMutedColorDefault !important
-    color var(--textMutedColor) !important
-    border-color $borderColorDefault !important
-    border-color var(--borderColor) !important
-    background-color $bodyBgColorDefault !important
-    background-color var(--bodyBgColor) !important
+    text $textMutedColorDefault var(--textMutedColor) true
+    borderColor $borderColorDefault var(--borderColor) true
+    bgColor $bodyBgColorDefault var(--bodyBgColor) true
     &:focus
-      border-color $accentColorDefault !important
-      border-color var(--accentColor) !important
+      borderColor $accentColorDefault var(--accentColor) true
   .suggestions
-    background $bodyBgColorDefault !important
-    background var(--bodyBgColor) !important
-    border-color $borderColorDefault !important
-    border-color var(--borderColor) !important
+    bg $bodyBgColorDefault var(--bodyBgColor) true
+    borderColor $borderColorDefault var(--borderColor) true
   .suggestion
     a
-      color $textMutedColorDefault !important
-      color var(--textMutedColor) !important
+      text $textMutedColorDefault var(--textMutedColor) true
     &.focused
-      background-color $bodyComplementColorDefault !important
-      background-color var(--bodyComplementColor) !important
+      bgColor $bodyComplementColorDefault var(--bodyComplementColor) true
       a
-        color $accentColorDefault !important
-        color var(--accentColor) !important
+        text $accentColorDefault var(--accentColor) true
 
 {$contentClass}:not(.custom)
   @extend $wrapper
@@ -184,8 +169,8 @@ body, .theme-container
 
   p.demo
     padding 1rem 1.5rem
-    border 1px solid $borderColorDefault
-    border 1px solid var(--borderColor)
+    border 1px solid
+    borderColor $borderColorDefault var(--borderColor)
     border-radius 4px
 
   img
@@ -200,31 +185,27 @@ body, .theme-container
 
 a
   font-weight 500
-  color $accentColorDefault
-  color var(--accentColor)
+  text $accentColorDefault var(--accentColor)
   text-decoration none
 
 p a code
   font-weight 400
-  color $accentColorDefault
-  color var(--accentColor)
+  text $accentColorDefault var(--accentColor)
 
 kbd
-  background $textMutedColorDefault
-  background var(--textMutedColor)
-  border solid 0.15rem $borderColorDefault
-  border solid 0.15rem var(--borderColor)
-  border-bottom solid 0.25rem $borderColorDefault
-  border-bottom solid 0.25rem var(--borderColor)
+  bg $textMutedColorDefault var(--textMutedColor)
+  border solid 0.15rem
+  borderColor $borderColorDefault var(--borderColor)
+  border-bottom solid 0.25rem
+  borderBottomColor $borderColorDefault var(--borderColor)
   border-radius 0.15rem
   padding 0 0.15em
 
 blockquote
   font-size inherit
-  color $textMutedColorDefault
-  color var(--textMutedColor)
-  border-left .2rem solid $borderColorDefault
-  border-left .2rem solid var(--borderColor)
+  text $textMutedColorDefault var(--textMutedColor)
+  border-left .2rem solid
+  borderLeftColor $borderColorDefault var(--borderColor)
   margin 0.5rem 0
   padding .25rem 0 .25rem 1rem
 
@@ -262,8 +243,8 @@ h1
 h2
   font-size 1.65rem
   padding-bottom .3rem
-  border-bottom 1px solid $borderColorDefault
-  border-bottom 1px solid var(--borderColor)
+  border-bottom 1px solid
+  borderBottomColor $borderColorDefault var(--borderColor)
 
 h3
   font-size 1.35rem
@@ -287,8 +268,8 @@ p, ul, ol, th, td
 
 hr
   border 0
-  border-top 1px solid $borderColorDefault
-  border-top 1px solid var(--borderColor)
+  border-top 1px solid
+  borderTopColor $borderColorDefault var(--borderColor)
 
 table
   border-collapse collapse
@@ -297,17 +278,29 @@ table
   overflow-x: auto
 
 tr
-  border-top 1px solid $borderColorDefault
-  border-top 1px solid var(--borderColor)
+  border-top 1px solid
+  borderTopColor $borderColorDefault var(--borderColor)
 
   &:nth-child(2n)
-    background-color $bodyComplementColorDefault
-    background-color var(--bodyComplementColor)
+    bgColor $bodyComplementColorDefault var(--bodyComplementColor)
 
 th, td
-  border 1px solid $borderColorDefault
-  border 1px solid var(--borderColor)
+  border 1px solid
+  borderColor $borderColorDefault var(--borderColor)
   padding .6em 1em
+
+.theme-code-group__nav
+  margin-bottom -15px !important
+  bgColor $codeBgHighlightColorDefault var(--codeBgHighlightColor) true
+
+.theme-code-group__nav-tab
+  padding-right 10px !important
+  padding-left 10px !important
+
+.theme-code-group__nav-tab-active
+  bgColor $codeBlockActiveColorDefault var(--codeBlockActiveColor) true
+  outlineColor $codeBlockActiveColorDefault var(--codeBlockActiveColor) true
+  border none !important
 
 .theme-container
   &.sidebar-open
