@@ -26,22 +26,16 @@ Update `.vuepress/config.js` as follows.
 ```js
 module.exports = {
   theme: 'vuepress-theme-succinct',
-  globalUIComponents: [
-    'ThemeManager'
-  ],
 }
 ```
 
-`ThemeManager` provides theme-switching functionality across the app.
+A `ThemeManager` component is automatically added to provide theme-switching functionality across the app.
 
 Note that you can also use the shorthand name for the theme.
 
 ```js
 module.exports = {
   theme: 'succinct',
-  globalUIComponents: [
-    'ThemeManager'
-  ],
 }
 ```
 
