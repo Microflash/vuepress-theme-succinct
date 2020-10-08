@@ -38,7 +38,7 @@
 
 <script>
 import AlgoliaSearchBox from '@theme/components/AlgoliaSearchBox.vue'
-import SearchBox from '@theme/components/SearchBox.vue'
+import SearchBox from '@vuepress/plugin-search/SearchBox.vue'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 
