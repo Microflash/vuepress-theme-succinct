@@ -14,10 +14,19 @@ title: Installation
 
 Add the dependency to your existing Vuepress project via Yarn or NPM.
 
+<code-group>
+<code-block title="Yarn" active>
 ```sh
 yarn add -D vuepress-theme-succinct
+```
+</code-block>
+
+<code-block title="NPM">
+```sh
 npm install -D vuepress-theme-succinct
 ```
+</code-block>
+</code-group>
 
 ::: tip
 Refer to [Getting Started Guide](https://vuepress.vuejs.org/guide/getting-started.html) to create a Vuepress project.

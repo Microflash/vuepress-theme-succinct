@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: Succinct v1.5.3
+heroText: Succinct v1.6.2
 tagline: A slightly opinionated theme for Vuepress
 actionText: Get Started
 actionLink: /guide/

@@ -1,8 +1,7 @@
 module.exports = {
   title: 'Succinct',
   description: 'A slightly opinionated theme for Vuepress',
-  base: '/vuepress-theme-succinct/',
-  dest: 'docs/.vuepress/theme/docs',
+  dest: 'public',
   theme: 'succinct',
   globalUIComponents: [
     'ThemeManager'
