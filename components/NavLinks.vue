@@ -21,6 +21,7 @@
 
     <!-- Theme Switcher -->
     <div
+      v-if="showThemeSwitcher"
       class="nav-item"
     >
       <ThemeSwitcher />
@@ -45,6 +46,7 @@ import DropdownLink from '@theme/components/DropdownLink.vue'
 import { resolveNavLinkItem } from '../util'
 import NavLink from '@theme/components/NavLink.vue'
 import ThemeSwitcher from '@theme/components/ThemeSwitcher.vue'
+import globalUIComponents from '@internal/global-ui'
 
 export default {
   name: 'NavLinks',
@@ -58,6 +60,10 @@ export default {
   computed: {
     userNav () {
       return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || []
+    },
+
+    showThemeSwitcher () {
+      return Array.isArray(globalUIComponents) && globalUIComponents.includes('ThemeManager')
     },
 
     nav () {
