@@ -9,7 +9,7 @@
 for f in $themeFont
   @import url(f)
 
-[data-theme='light']
+:root, [data-theme='light']
   --accentColor $accentColor
   --textColor $textColor
   --textMutedColor lighten($textColor, 25%)
@@ -103,6 +103,9 @@ body, .theme-container
     text-size-adjust 100%
 
   text $textColorDefault var(--textColor)
+
+body
+  min-height 100vh
 
 .page
   padding-left $sidebarWidth
