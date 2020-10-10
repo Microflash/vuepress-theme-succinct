@@ -7601,10 +7601,10 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress-theme-succinct@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-succinct/-/vuepress-theme-succinct-1.6.2.tgz#e15adccc47938e9509e5d0b7c5c32b02dea2bc14"
-  integrity sha512-ZFtglsQYh/J2KRo0FW7cs5Dk+HHuGScAN4Hg0+c6pa+w/YI97LOnpceP7YRiFTwjp7HHal5wXLSkpno74J2oqg==
+vuepress-theme-succinct@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-succinct/-/vuepress-theme-succinct-1.6.3.tgz#d90805e273bf4fa3100537848a7bcf74031419cc"
+  integrity sha512-GYfVNvywlMcq7WoxQ1BXkYKCZ3wa3aYb15T0ZQZQuVTPh1aWE6B6ebA3zq/VaDIxXWTfsSjnPGNIK7s0qGWH2g==
   dependencies:
     "@vuepress/plugin-active-header-links" "^1.6.0"
     "@vuepress/plugin-nprogress" "^1.6.0"
