@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-succinct",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "A slightly opinionated theme for Vuepress",
   "scripts": {
     "start": "vuepress dev docs",
@@ -9,9 +9,9 @@
   },
   "devDependencies": {
     "vuepress": "^1.6.0",
-    "vuepress-theme-succinct": "^1.6.3"
+    "vuepress-theme-succinct": "^1.6.4"
   },
-  "repository": "https://gitlab.com/foundryside/vuepress-theme-succinct.git",
+  "repository": "https://github.com/Microflash/vuepress-theme-succinct.git",
   "author": "Naiyer Asif",
   "license": "MIT"
 }

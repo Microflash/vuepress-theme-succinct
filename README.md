@@ -45,7 +45,7 @@ module.exports = {
 }
 ```
 
-Check out the [documentation](https://microflash.github.io/vuepress-theme-succinct/) built with Vuepress and Succinct :smile: for more details.
+Check out the [documentation](https://succinct.mflash.dev/) built with Vuepress and Succinct :smile: for more details.
 
 ## Contribute
 
