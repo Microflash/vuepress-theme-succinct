@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-succinct",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "A slightly opinionated theme for Vuepress",
   "main": "index.js",
   "publishConfig": {
@@ -33,7 +33,7 @@
     "docsearch.js": "^2.5.2",
     "lodash": "^4.17.20",
     "stylus": "^0.54.8",
-    "stylus-loader": "^4.3.1",
+    "stylus-loader": "^3.0.2",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-smooth-scroll": "^0.0.10"
   }
