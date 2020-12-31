@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-succinct",
-  "version": "1.6.4",
+  "version": "1.7.1",
   "description": "A slightly opinionated theme for Vuepress",
   "main": "index.js",
   "publishConfig": {
@@ -27,13 +27,13 @@
   },
   "homepage": "https://succinct.mflash.dev",
   "dependencies": {
-    "@vuepress/plugin-active-header-links": "^1.6.0",
-    "@vuepress/plugin-nprogress": "^1.6.0",
-    "@vuepress/plugin-search": "^1.6.0",
+    "@vuepress/plugin-active-header-links": "^1.7.1",
+    "@vuepress/plugin-nprogress": "^1.7.1",
+    "@vuepress/plugin-search": "^1.7.1",
     "docsearch.js": "^2.5.2",
     "lodash": "^4.17.20",
     "stylus": "^0.54.8",
-    "stylus-loader": "^3.0.2",
+    "stylus-loader": "^4.3.1",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-smooth-scroll": "^0.0.10"
   }

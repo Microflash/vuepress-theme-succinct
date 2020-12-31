@@ -8,9 +8,9 @@ A slightly opinionated theme for Vuepress
 
 ## Features
 
-- **Customizable typography**: Import and use your favorite web-fonts. Customize font sizes and text-adjustment for body text
+- **Customizable typography**: Webfont support with font size and text-adjustment customization
 - **Dark and light themes**: System theme detection with a theme-switcher to set the theme as per the user preference
-- **Accessible**: Succinct applies tweaks - deeper contrast, better legibility preferences, etc - to improve the readability
+- **Accessible**: Larger font size, deeper contrast, better legibility preferences to improve the readability
 
 ## Get Started
 
