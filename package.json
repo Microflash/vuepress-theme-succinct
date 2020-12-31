@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-succinct",
-  "version": "1.6.4",
+  "version": "1.7.1",
   "description": "A slightly opinionated theme for Vuepress",
   "scripts": {
     "start": "vuepress dev docs",
@@ -8,8 +8,8 @@
     "eject": "vuepress eject docs"
   },
   "devDependencies": {
-    "vuepress": "^1.6.0",
-    "vuepress-theme-succinct": "^1.6.4"
+    "vuepress": "^1.7.1",
+    "vuepress-theme-succinct": "^1.7.1"
   },
   "repository": "https://github.com/Microflash/vuepress-theme-succinct.git",
   "author": "Naiyer Asif",
